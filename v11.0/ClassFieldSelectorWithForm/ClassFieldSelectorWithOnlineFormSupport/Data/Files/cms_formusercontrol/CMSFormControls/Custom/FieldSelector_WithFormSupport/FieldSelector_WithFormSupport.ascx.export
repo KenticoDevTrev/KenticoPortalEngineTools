@@ -1,0 +1,18 @@
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="CMSFormControls_Custom_FieldSelector_WithFormSupport"
+     CodeFile="~/CMSFormControls/Custom/FieldSelector_WithFormSupport/FieldSelector_WithFormSupport.ascx.cs" %>
+<%@ Register Src="~/CMSFormControls/Custom/FieldSelector_WithFormSupport/SelectClassNames_WithFormSupport.ascx" TagPrefix="custom"
+    TagName="SelectClassNames" %>
+<div class="editing-form-value-cell">
+    <div>
+        <custom:SelectClassNames ID="classSelector" runat="server" SelectionMode="SingleDropDownList" />
+    </div>
+    <cms:CMSUpdatePanel ID="pnlUpdate" runat="server">
+        <ContentTemplate>
+            <cms:CMSPanel ID="pnlFields" runat="server">
+                <div style="padding-top:5px">
+                    <cms:CMSDropDownList ID="fieldSelector" runat="server" CssClass="DropDownField" />
+                </div>
+            </cms:CMSPanel>
+        </ContentTemplate>
+    </cms:CMSUpdatePanel>
+</div>

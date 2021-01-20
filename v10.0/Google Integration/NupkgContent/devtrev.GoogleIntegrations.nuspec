@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>devtrev.GoogleIntegrations</id>
+    <version>1.0.0</version>
+    <title>Google Integrations</title>
+    <authors>Trevor Fayas - DevTrev.com</authors>
+    <owners>Trevor Fayas - DevTrev.com</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Module for base settings and supporting classes for Google Suite Integrations</description>
+  </metadata>
+</package>

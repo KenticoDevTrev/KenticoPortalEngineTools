@@ -1,0 +1,35 @@
+﻿<cms_formusercontrol version="9.0">
+  <NewDataSet>
+    <cms_formusercontrol>
+      <UserControlID>714</UserControlID>
+      <UserControlDisplayName>InvisibleReCaptcha</UserControlDisplayName>
+      <UserControlCodeName>InvisibleReCaptcha</UserControlCodeName>
+      <UserControlFileName>~/CMSFormControls/Captcha/InvisibleReCaptcha.ascx</UserControlFileName>
+      <UserControlForText>true</UserControlForText>
+      <UserControlForLongText>false</UserControlForLongText>
+      <UserControlForInteger>false</UserControlForInteger>
+      <UserControlForDecimal>false</UserControlForDecimal>
+      <UserControlForDateTime>false</UserControlForDateTime>
+      <UserControlForBoolean>false</UserControlForBoolean>
+      <UserControlForFile>false</UserControlForFile>
+      <UserControlShowInBizForms>true</UserControlShowInBizForms>
+      <UserControlDefaultDataType>text</UserControlDefaultDataType>
+      <UserControlDefaultDataTypeSize>1</UserControlDefaultDataTypeSize>
+      <UserControlShowInDocumentTypes>false</UserControlShowInDocumentTypes>
+      <UserControlShowInSystemTables>false</UserControlShowInSystemTables>
+      <UserControlShowInWebParts>false</UserControlShowInWebParts>
+      <UserControlShowInReports>false</UserControlShowInReports>
+      <UserControlGUID>b0ab398e-9e89-4297-b5de-f3a1cc6bf54b</UserControlGUID>
+      <UserControlLastModified>2017-08-10T17:40:37.7594105+10:00</UserControlLastModified>
+      <UserControlForGuid>false</UserControlForGuid>
+      <UserControlShowInCustomTables>false</UserControlShowInCustomTables>
+      <UserControlForVisibility>false</UserControlForVisibility>
+      <UserControlParameters>&lt;form version="2"&gt;&lt;field allowempty="true" column="SiteKey" columnsize="4000" columntype="text" guid="6275ed2f-d09d-4924-b559-277823792288" publicfield="false" resolvedefaultvalue="False" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Site Key&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="Secret" columnsize="4000" columntype="text" guid="d2f6c389-a7c3-467c-9891-833554a31f92" publicfield="false" reftype="Required" resolvedefaultvalue="False" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Secret&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</UserControlParameters>
+      <UserControlForDocAttachments>false</UserControlForDocAttachments>
+      <UserControlType>7</UserControlType>
+      <UserControlIsSystem>false</UserControlIsSystem>
+      <UserControlForBinary>false</UserControlForBinary>
+      <UserControlForDocRelationships>false</UserControlForDocRelationships>
+    </cms_formusercontrol>
+  </NewDataSet>
+</cms_formusercontrol>

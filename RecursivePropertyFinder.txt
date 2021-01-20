@@ -1,0 +1,65 @@
+
+    protected int MaxLevel = 5;
+    protected bool FindValue(List<object> objects, string TheValueContains, int Level)
+    {
+        if (Level > MaxLevel)
+        {
+            return false;
+        }
+        bool foundItem = false;
+        List<object> subObjects=  new List<object>();
+        foreach (object theObject in objects)
+        {
+            if (theObject == null)
+            {
+                continue;
+            }
+            
+            foreach (var prop in theObject.GetType().GetProperties())
+            {
+                if (prop.GetGetMethod() != null)
+                {
+                    if (prop.GetIndexParameters().Length == 0)
+                    {
+                        if (prop.PropertyType == typeof(string) && prop.Name != "DocumentContent")
+                        {
+                            try
+                            {
+                                if (ValidationHelper.GetString(prop.GetGetMethod().Invoke(theObject, null), "").Contains(TheValueContains))
+                                {
+                                    foundItem = true;
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                string bla2 = "";
+                            }
+                        }
+                        else
+                        {
+                            try { 
+                                subObjects.Add(prop.GetGetMethod().Invoke(theObject, null));
+                            }
+                            catch (Exception ex)
+                            {
+                                string bla = "";
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (var indexParam in prop.GetIndexParameters())
+                        {
+                            string test = "";
+                        }
+                    }
+                }
+            }
+        }
+            if(foundItem) {
+                return true;
+            } else {
+                foundItem = FindValue(subObjects, TheValueContains, Level+1);
+            }
+            return foundItem;
+    }

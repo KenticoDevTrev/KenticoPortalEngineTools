@@ -1,0 +1,60 @@
+﻿<cms_webpart version="11.0">
+  <NewDataSet>
+    <cms_webpart>
+      <WebPartID>2696</WebPartID>
+      <WebPartName>ResetPassword_ExtendedValidationWindow</WebPartName>
+      <WebPartDisplayName>Reset password (Extended Validation Window)</WebPartDisplayName>
+      <WebPartDescription>This web part processes password reset requests, with logic to allow multiple visits within a period of time.  This prevents the request from invalidating from things like email verification links and such. If the URL contains a valid request, a dialog where users can change their password is displayed.</WebPartDescription>
+      <WebPartFileName>Membership/Users/ResetPasswordExtendedValidationWindow.ascx</WebPartFileName>
+      <WebPartProperties>&lt;form version="2"&gt;&lt;field column="MinutesExtended" columntype="integer" guid="32ca8dd5-9de1-47f4-bcc9-c300137d1337" publicfield="false" resolvedefaultvalue="False" visible="true"&gt;&lt;properties&gt;&lt;defaultvalue&gt;5&lt;/defaultvalue&gt;&lt;fieldcaption&gt;Minutes Extended&lt;/fieldcaption&gt;&lt;fielddescription&gt;From the first time the request is made, how many minutes the hash will 'remain' active.&lt;/fielddescription&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="InvalidRequestText" columnsize="1000" columntype="text" guid="1c4cb9ff-19e2-4e24-a8b7-2f006f96c15d" publicfield="false" visibility="none" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Invalid request text&lt;/fieldcaption&gt;&lt;fielddescription&gt;Sets the text that will be displayed if the request token (hash) in the URL query string is invalid. This token is used to identify which user's password should be changed.&lt;/fielddescription&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="ExceededIntervalText" columnsize="1000" columntype="text" guid="67b05e6f-97ca-4702-8dac-886a9891bee3" publicfield="false" visibility="none" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Exceeded interval text&lt;/fieldcaption&gt;&lt;fielddescription&gt;Sets the text that will be displayed if the current password reset request is no longer valid. This happens if the time interval specified in 'Settings -&amp;gt; Security &amp;amp; Membership -&amp;gt; Passwords -&amp;gt; Reset password interval' is exceeded (counted from the time when the initial request was made).&lt;/fielddescription&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="SuccessText" columnsize="1000" columntype="text" guid="1f4ca9e4-fba2-4bae-bfa0-e7d7011e0bb3" publicfield="false" visibility="none" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Success text&lt;/fieldcaption&gt;&lt;fielddescription&gt;Sets the text displayed when a user successfully changes their password.&lt;/fielddescription&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="RedirectUrl" columnsize="1000" columntype="text" guid="d4ef36c4-aa03-4dfe-a2ef-4e8717499e97" publicfield="false" visibility="none" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Redirect url&lt;/fieldcaption&gt;&lt;fielddescription&gt;Can be used to specify the URL of a page to which users will be redirected after they successfully change their password (e.g. a logon page).&lt;/fielddescription&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="SendEmailFrom" columnsize="254" columntype="text" guid="48c1f7af-4b0e-4fd9-bb14-f0cd0fa95962" publicfield="false" visibility="none" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Send e-mail from:&lt;/fieldcaption&gt;&lt;fielddescription&gt;E-mails containing the new password will be sent to users from this address. These e-mails are only sent if the 'Settings -&amp;gt; Security &amp;amp; Membership -&amp;gt; Passwords -&amp;gt; Send e-mail with reset password' setting is enabled.&lt;/fielddescription&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</WebPartProperties>
+      <WebPartCategoryID>373</WebPartCategoryID>
+      <WebPartDocumentation>&lt;p&gt;
+	&lt;span style="font-size: 12px"&gt;&lt;span style="color: rgb(0,0,0)"&gt;The web part&amp;nbsp;provides a way&amp;nbsp;to create a&amp;nbsp;password reset&amp;nbsp;page with a custom&amp;nbsp;design that&amp;nbsp;can be used instead of the&amp;nbsp;default system page.&amp;nbsp;The URL of such a page must be entered into the &lt;strong&gt;Reset password page&lt;/strong&gt; setting in &lt;strong&gt;Settings -&amp;gt; Security &amp;amp; Membership -&amp;gt; Passwords&lt;/strong&gt; or into the &lt;strong&gt;Reset password page URL&lt;/strong&gt; property of individual &lt;strong&gt;Logon form&lt;/strong&gt; web parts.&lt;strong&gt; &lt;/strong&gt;Once assigned, the links in the confirmation e-mails sent as a reply to password reset requests will lead to the page. There, the web part will automatically process the query string parameter and allow users with valid requests to change their password.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+</WebPartDocumentation>
+      <WebPartGUID>7eeac441-83e4-456b-8615-81c16e9eb67d</WebPartGUID>
+      <WebPartLastModified>2021-01-12T12:08:32.6070719-06:00</WebPartLastModified>
+      <WebPartType>0</WebPartType>
+      <WebPartDefaultValues>&lt;form /&gt;</WebPartDefaultValues>
+      <WebPartSkipInsertProperties>false</WebPartSkipInsertProperties>
+      <WebPartDefaultConfiguration>&lt;page /&gt;</WebPartDefaultConfiguration>
+      <WebPartIconClass>icon-w-reset-password</WebPartIconClass>
+    </cms_webpart>
+    <cms_webpartcategory>
+      <CategoryID>249</CategoryID>
+      <CategoryDisplayName>All web parts</CategoryDisplayName>
+      <CategoryName>/</CategoryName>
+      <CategoryGUID>d782b5c3-27f3-45e6-a5cc-86c1944e2c8d</CategoryGUID>
+      <CategoryLastModified>2014-02-28T09:24:42.1712665-06:00</CategoryLastModified>
+      <CategoryPath>/</CategoryPath>
+      <CategoryLevel>0</CategoryLevel>
+      <CategoryChildCount>46</CategoryChildCount>
+      <CategoryWebPartChildCount>0</CategoryWebPartChildCount>
+    </cms_webpartcategory>
+    <cms_webpartcategory>
+      <CategoryID>164</CategoryID>
+      <CategoryDisplayName>Membership</CategoryDisplayName>
+      <CategoryParentID>249</CategoryParentID>
+      <CategoryName>Membership</CategoryName>
+      <CategoryGUID>9d58eec4-fb81-4dfb-87bb-e6bfbca98a08</CategoryGUID>
+      <CategoryLastModified>2017-03-03T06:19:41.7923547-06:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryPath>/Membership</CategoryPath>
+      <CategoryLevel>1</CategoryLevel>
+      <CategoryChildCount>6</CategoryChildCount>
+      <CategoryWebPartChildCount>0</CategoryWebPartChildCount>
+    </cms_webpartcategory>
+    <cms_webpartcategory>
+      <CategoryID>373</CategoryID>
+      <CategoryDisplayName>Users</CategoryDisplayName>
+      <CategoryParentID>164</CategoryParentID>
+      <CategoryName>MembershipUsers</CategoryName>
+      <CategoryGUID>a08d8f1a-7771-4832-95e2-2cfc4ca84695</CategoryGUID>
+      <CategoryLastModified>2017-03-03T06:19:41.8782244-06:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryPath>/Membership/MembershipUsers</CategoryPath>
+      <CategoryLevel>2</CategoryLevel>
+      <CategoryChildCount>0</CategoryChildCount>
+      <CategoryWebPartChildCount>7</CategoryWebPartChildCount>
+    </cms_webpartcategory>
+  </NewDataSet>
+</cms_webpart>

@@ -1,0 +1,13 @@
+Create Alt form for cms.relationshipname "NewForm"
+
+Set RelationshipNameIsAdHoc -> Display Field in Editing Form (true), 
+Field Caption: Relationship Is AdHoc (Sortable)
+Field Description: Must be true if you wish to use sorting.
+
+Repeat for EditForm
+
+(remove where condition)
+Development.RelationshipNames -> Customize and remove WHERE condition
+NewRelationshipName  -> Customize and set Alternative form name to NewForm
+EditRelationshipName -> General  -> Customize and set Alternative form name to NewForm
+

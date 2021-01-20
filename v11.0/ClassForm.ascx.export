@@ -1,0 +1,5 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="~/CMSWebParts/Custom/ClassForm/ClassForm.ascx.cs" Inherits="CMSWebParts_Custom_ClassForm" %>
+<asp:Literal ID="ltrHideForm" runat="server" />
+<cms:UIContextPanel runat="server" ID="pnlUIContext">
+    <cms:DataForm ID="form" runat="server" />
+</cms:UIContextPanel>

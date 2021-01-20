@@ -1,0 +1,38 @@
+﻿<cms_formusercontrol version="11.0">
+  <NewDataSet>
+    <cms_formusercontrol>
+      <UserControlID>1716</UserControlID>
+      <UserControlDisplayName>Class field selector (With Form Support)</UserControlDisplayName>
+      <UserControlCodeName>ClassFieldSelector_WithFormSupport</UserControlCodeName>
+      <UserControlFileName>~/CMSFormControls/Custom/FieldSelector_WithFormSupport/FieldSelector_WithFormSupport.ascx</UserControlFileName>
+      <UserControlForText>true</UserControlForText>
+      <UserControlForLongText>false</UserControlForLongText>
+      <UserControlForInteger>false</UserControlForInteger>
+      <UserControlForDecimal>false</UserControlForDecimal>
+      <UserControlForDateTime>false</UserControlForDateTime>
+      <UserControlForBoolean>false</UserControlForBoolean>
+      <UserControlForFile>false</UserControlForFile>
+      <UserControlShowInBizForms>false</UserControlShowInBizForms>
+      <UserControlDefaultDataType>Text</UserControlDefaultDataType>
+      <UserControlShowInDocumentTypes>true</UserControlShowInDocumentTypes>
+      <UserControlShowInSystemTables>false</UserControlShowInSystemTables>
+      <UserControlShowInWebParts>true</UserControlShowInWebParts>
+      <UserControlShowInReports>false</UserControlShowInReports>
+      <UserControlGUID>be6af78a-99a2-43ff-8c8f-f4626fc8b38e</UserControlGUID>
+      <UserControlLastModified>2018-07-17T15:20:06.8674957-05:00</UserControlLastModified>
+      <UserControlForGuid>false</UserControlForGuid>
+      <UserControlShowInCustomTables>true</UserControlShowInCustomTables>
+      <UserControlForVisibility>false</UserControlForVisibility>
+      <UserControlParameters>&lt;form version="2"&gt;&lt;field allowempty="true" column="ClassType" columntype="integer" guid="bb439e86-ccbb-4679-ace6-650d13d4703f" publicfield="false" resolvedefaultvalue="False" visibility="none" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Class type&lt;/fieldcaption&gt;&lt;fielddescription&gt;Indicates which class type will be offered for field selection.&lt;/fielddescription&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;DropDownListControl&lt;/controlname&gt;&lt;DisplayActualValueAsItem&gt;False&lt;/DisplayActualValueAsItem&gt;&lt;EditText&gt;False&lt;/EditText&gt;&lt;Options&gt;0;{$objecttasks.cms_customtable$}
+1;{$objecttasks.cms_documenttype$}
+2;{$objecttasks.cms_systemtable$}
+3;biz forms&lt;/Options&gt;&lt;SortItems&gt;False&lt;/SortItems&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="FieldCondition" columnsize="200" columntype="text" guid="09445d85-0e19-430d-a49f-42b9f58ba151" publicfield="false" resolvedefaultvalue="False" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Field condition&lt;/fieldcaption&gt;&lt;fielddescription&gt;Defines macro condition to filter visible fields. If empty all fields are shown. For example macro {%DataType == "Text"%} shows only text fields.&lt;/fielddescription&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field allowempty="true" column="ClassNameColumnName" columnsize="200" columntype="text" guid="679eb375-2acf-45d8-ae5b-2b4b998d5c43" publicfield="false" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Class name column name&lt;/fieldcaption&gt;&lt;fielddescription&gt;Name of the column used for store class name for selected field.&lt;/fielddescription&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</UserControlParameters>
+      <UserControlForDocAttachments>false</UserControlForDocAttachments>
+      <UserControlType>2</UserControlType>
+      <UserControlDescription>Provides a selector of a table/page type/Online Form and its fields.</UserControlDescription>
+      <UserControlIsSystem>false</UserControlIsSystem>
+      <UserControlForBinary>false</UserControlForBinary>
+      <UserControlForDocRelationships>false</UserControlForDocRelationships>
+    </cms_formusercontrol>
+  </NewDataSet>
+</cms_formusercontrol>

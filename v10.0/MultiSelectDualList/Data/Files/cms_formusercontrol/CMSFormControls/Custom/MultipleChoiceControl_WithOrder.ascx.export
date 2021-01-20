@@ -1,0 +1,110 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="~/CMSFormControls/Custom/MultipleChoiceControl_WithOrder.ascx.cs"
+    Inherits="CMSFormControls_Custom_MultipleChoiceControl_WithOrder" %>
+<script type="text/javascript">
+	$MCC_WOJ = (typeof $cmsj !== 'undefined' ? $cmsj : jQuery);
+    $MCC_WOJ(function () {
+        // Makes sure only runs once even with multiple controls.
+        if (typeof ranOnce === 'undefined') {
+            $MCC_WOJ(".multiSelectContainer").each(function (index, containerDiv) {
+                var selectedArray = $MCC_WOJ(".previousValues", containerDiv).val().split("|");
+                $MCC_WOJ(".multiselect option[selected='selected']", containerDiv).removeAttr("selected");
+                $MCC_WOJ(".selectButton", containerDiv).click(function () {
+                    var containerDiv = $MCC_WOJ(this).closest(".multiSelectContainer");
+                    $MCC_WOJ(".availableItems option:selected", containerDiv).first().detach().appendTo($MCC_WOJ(".selectedItems", containerDiv));
+                    $MCC_WOJ(".availableItems option:selected", containerDiv).removeAttr("selected");
+
+                    var values = new Array();
+                    $MCC_WOJ(".selectedItems option", containerDiv).each(function () { values.push($MCC_WOJ(this).val()); });
+                    $MCC_WOJ(".selectedValues", containerDiv).val(values.join('|'));
+                });
+                $MCC_WOJ(".deselectButton", containerDiv).click(function () {
+                    var containerDiv = $MCC_WOJ(this).closest(".multiSelectContainer");
+                    $MCC_WOJ(".selectedItems option:selected", containerDiv).first().detach().appendTo($MCC_WOJ(".availableItems", containerDiv));
+                    $MCC_WOJ(".selectedItems option:selected", containerDiv).removeAttr("selected");
+
+                    var values = new Array();
+                    $MCC_WOJ(".selectedItems option", containerDiv).each(function () { values.push($MCC_WOJ(this).val()); });
+                    $MCC_WOJ(".selectedValues", containerDiv).val(values.join('|'));
+                });
+                $MCC_WOJ(".orderUpButton", containerDiv).click(function () {
+                    var containerDiv = $MCC_WOJ(this).closest(".multiSelectContainer");
+                    var current = $MCC_WOJ(".selectedItems option:selected", containerDiv).first();
+                    current.prev().before(current);
+                    $MCC_WOJ(".availableItems option:selected", containerDiv).removeAttr("selected");
+
+                    var values = new Array();
+                    $MCC_WOJ(".selectedItems option", containerDiv).each(function () { values.push($MCC_WOJ(this).val()); });
+                    $MCC_WOJ(".selectedValues", containerDiv).val(values.join('|'));
+                });
+                $MCC_WOJ(".orderDownButton", containerDiv).click(function () {
+                    var containerDiv = $MCC_WOJ(this).closest(".multiSelectContainer");
+                    var current = $MCC_WOJ(".selectedItems option:selected", containerDiv).first();
+                    current.next().after(current);
+                    $MCC_WOJ(".availableItems option:selected", containerDiv).removeAttr("selected");
+
+                    var values = new Array();
+                    $MCC_WOJ(".selectedItems option", containerDiv).each(function () { values.push($MCC_WOJ(this).val()); });
+                    $MCC_WOJ(".selectedValues", containerDiv).val(values.join('|'));
+                });
+                for (var s = 0; s < selectedArray.length; s++) {
+                    $MCC_WOJ(".availableItems option[value='" + selectedArray[s] + "']", containerDiv).first().detach().appendTo($MCC_WOJ(".selectedItems", containerDiv));
+                }
+                var values = new Array();
+                $MCC_WOJ(".selectedItems option", containerDiv).each(function () { values.push($MCC_WOJ(this).val()); });
+                $MCC_WOJ(".selectedValues", containerDiv).val(values.join('|'));
+            });
+            $MCC_WOJ(".multiSelectContainer").click(function (event) {
+                if ($MCC_WOJ(event.target).closest("select").length) {
+                    if (!$MCC_WOJ(event.target).closest(".availableItems").length) $MCC_WOJ(".availableItems option:selected", $MCC_WOJ(event.target).closest(".multiSelectContainer")).removeAttr("selected");
+                    else $MCC_WOJ(".selectedItems option:selected", $MCC_WOJ(event.target).closest(".multiSelectContainer")).removeAttr("selected");
+                }
+            });
+            ranOnce = true;
+        }
+    });
+</script>
+<div class="multiSelectContainer">
+    <cms:CMSListBox ID="list" runat="server" CssClass="availableItems" />
+    <div class="MyControls">
+        <input type="button" class="selectButton" value="&gt;" />
+        <input type="button" class="deselectButton" value="&lt;" />
+    </div>
+    <cms:CMSListBox ID="selected" runat="server" CssClass="selectedItems" />
+    <asp:Panel ID="pnlSortButtons" runat="server">
+    <div class="MyControls">
+        <input type="button" class="orderUpButton" value="&#8593;" />
+        <input type="button" class="orderDownButton" value="&#8595;" />
+    </div>
+    </asp:Panel>
+    <asp:TextBox ID="previousItems" CssClass="previousValues" runat="server" />
+    <asp:TextBox ID="selectedItems" CssClass="selectedValues" runat="server" />
+</div>
+<style type="text/css">
+    .availableItems, .MyControls, .selectedItems {
+        float: left;
+    }
+
+    .MyControls {
+        text-align: center;
+        width: 50px;
+        float:left;
+    }
+    .previousValues, .selectedValues {
+        display: none;
+    }
+    
+    .cms-bootstrap input.selectButton, .cms-bootstrap input.deselectButton, .cms-bootstrap input.orderUpButton, .cms-bootstrap input.orderDownButton {
+        background-color: #333;
+        border: 0 none;
+        color: white;
+        font-size: 16px;
+        height: 25px;
+        margin: 5px 0;
+        padding: 0;
+        width: 25px;
+    }
+
+    .cms-bootstrap select.availableItems.form-control, .cms-bootstrap select.selectedItems.form-control {
+        margin-right: 0;
+    }
+</style>

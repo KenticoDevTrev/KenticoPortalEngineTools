@@ -1,0 +1,83 @@
+﻿<cms_class version="10.0">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>5420</ClassID>
+      <ClassDisplayName>Tree Category</ClassDisplayName>
+      <ClassName>CMS.TreeCategory</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>false</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="CMS_TreeCategory"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="TreeCategoryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="NodeID" type="xs:int" /&gt;
+              &lt;xs:element name="CategoryID" type="xs:int" /&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//CMS_TreeCategory" /&gt;
+      &lt;xs:field xpath="TreeCategoryID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="TreeCategoryID" columnprecision="0" columntype="integer" guid="daccb3dd-8c87-4287-ab88-86d1e4b0d536" isPK="true" publicfield="false"&gt;&lt;properties&gt;&lt;fieldcaption&gt;TreeCategoryID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NodeID" columntype="integer" guid="d789e97f-97a1-4e84-93d7-eabbb81ad386" publicfield="false" refobjtype="cms.node" reftype="Binding" system="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Node&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CategoryID" columntype="integer" guid="eac024c7-d734-4e5f-a085-7c81e2f8af33" publicfield="false" refobjtype="cms.category" reftype="Binding" system="true" visible="true"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Category&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>CMS_TreeCategory</ClassTableName>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassLastModified>2018-11-08T23:06:53.2651871-06:00</ClassLastModified>
+      <ClassGUID>73c8b3b2-7a53-437f-bf42-0de825f060aa</ClassGUID>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchSettings>&lt;search /&gt;</ClassSearchSettings>
+      <ClassVersionGUID>a45c4a9f-9c05-4a4e-8d0d-f6456519add3</ClassVersionGUID>
+      <ClassIsForm>false</ClassIsForm>
+      <ClassResourceID>1438</ClassResourceID>
+      <ClassCodeGenerationSettings>&lt;Data&gt;&lt;NameSpace&gt;CMS&lt;/NameSpace&gt;&lt;/Data&gt;</ClassCodeGenerationSettings>
+      <ClassIsContentOnly>false</ClassIsContentOnly>
+    </cms_class>
+    <cms_query>
+      <QueryID>19341</QueryID>
+      <QueryName>EnsureForeignKeys</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>IF NOT EXISTS (SELECT * FROM sys.objects o WHERE o.object_id = object_id(N'[dbo].[FK_CMS_TreeCategory_CMS_Category]') AND OBJECTPROPERTY(o.object_id, N'IsForeignKey') = 1)
+BEGIN
+ALTER TABLE [dbo].[CMS_TreeCategory]  WITH CHECK ADD  CONSTRAINT [FK_CMS_TreeCategory_CMS_Category] FOREIGN KEY([CategoryID])
+REFERENCES [dbo].[CMS_Category] ([CategoryID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+
+ALTER TABLE [dbo].[CMS_TreeCategory] CHECK CONSTRAINT [FK_CMS_TreeCategory_CMS_Category]
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects o WHERE o.object_id = object_id(N'[dbo].[FK_CMS_TreeCategory_CMS_Tree]') AND OBJECTPROPERTY(o.object_id, N'IsForeignKey') = 1)
+BEGIN
+ALTER TABLE [dbo].[CMS_TreeCategory]  WITH CHECK ADD  CONSTRAINT [FK_CMS_TreeCategory_CMS_Tree] FOREIGN KEY([NodeID])
+REFERENCES [dbo].[CMS_Tree] ([NodeID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+
+ALTER TABLE [dbo].[CMS_TreeCategory] CHECK CONSTRAINT [FK_CMS_TreeCategory_CMS_Tree]
+END</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>5420</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2018-11-08T23:06:53.2511857-06:00</QueryLastModified>
+      <QueryGUID>1646571a-c580-403e-82d2-985dd160ef07</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+      <QueryConnectionString>CMSConnectionString</QueryConnectionString>
+    </cms_query>
+  </NewDataSet>
+</cms_class>

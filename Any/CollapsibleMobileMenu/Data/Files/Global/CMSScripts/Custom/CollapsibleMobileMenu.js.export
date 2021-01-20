@@ -1,0 +1,73 @@
+jQuery(document).ready(function () {
+    // Put class name here for each menu item.
+    initializeMenu("mobileMenu");
+});
+
+function initializeMenu(containerClassName) {
+    // use pure css hidden initially to keep it hidden till this can fully close it.
+    jQuery("."+containerClassName+" .mobileNav").each(function () {
+        jQuery(this).hide().removeClass("hidden");
+    });
+
+    jQuery("." + containerClassName + " .toggleButton").click(function () {
+        toggleMobileMenu(containerClassName);
+    });
+
+    jQuery("." + containerClassName + " .pageContainer .expandable").each(function () {
+        var button = jQuery(this);
+        if (jQuery(".mobileNav", button.parent().parent().parent()).length > 0) {
+            button.click(function () {
+                toggleSubMenu(button);
+            });
+        } else {
+            button.addClass("hidden");
+        }
+    });
+
+    // Can enable below to make clicking outside the menu close.
+    /*
+    jQuery(document).click(function (event) {
+        if ((jQuery(event.target).parents().index(jQuery('.mobileNav')) == -1 && jQuery(event.target).index(jQuery(".mobileNav")) == -1) && jQuery(event.target).parents().index(jQuery('.'+containerClassName+' .toggleButton')) == -1 && jQuery(event.target).index(jQuery('.'+containerClassName+' .toggleButton')) == -1) {
+            toggleMobileMenu(containerClassName, false);
+        }
+    });*/
+}
+
+
+
+// Send the jQuery of the clicked expandable object
+function toggleSubMenu(buttonObject) {
+    jQuery(jQuery(".mobileNav", buttonObject.parent().parent().parent())[0]).slideToggle(300);
+    buttonObject.toggleClass("opened");
+}
+
+// Toggles menu, forceToggle can be set to true for force open, false to force close, or not provided to toggle
+function toggleMobileMenu(menuClassName, forceToggle) {
+    var menuButton = jQuery("." + menuClassName + " .toggleButton");
+
+    if (forceToggle == null) {
+        menuButton.toggleClass("opened");
+        jQuery(jQuery("." + menuClassName + " .mobileNav")[0]).slideToggle(300);
+    } else {
+        if (forceToggle) {
+            // Force Open
+            menuButton.addClass("opened");
+            jQuery(jQuery("." + menuClassName + " .mobileNav")[0]).slideDown(300);
+        } else {
+            // Force Close
+            menuButton.removeClass("opened");
+            jQuery(jQuery("." + menuClassName + " .mobileNav")[0]).slideUp(300);
+        }
+    }
+
+    // Can enable below to make it where each item collapses if menu closes
+    /*
+    if (!menuButton.hasClass("opened")) {
+        jQuery("ul", menuButton.parent()).each(function () {
+            jQuery(this).slideUp(300);
+        });
+        jQuery(".opened", menuButton.parent()).each(function () {
+            jQuery(this).removeClass("opened");
+        });
+    }*/
+}

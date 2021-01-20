@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grid>
+  <actions parameters="DefaultTeamDrivesID">
+    <action name="edit" caption="$general.edit$" fonticonclass="icon-edit" fonticonstyle="allow" />
+    <action name="#delete" caption="$general.delete$" fonticonclass="icon-bin" fonticonstyle="critical" confirmation="$general.confirmdelete$" />
+  </actions>
+  <columns>
+    <column source="TeamDriveName"  externalsourcename="TeamDriveName" caption="$general.name$" wrap="false" />
+    <column source="TeamDriveID" externalsourcename="TeamDriveID"  caption="Team Drive ID" wrap="false" />
+    <column source="SiteID" externalsourcename="#sitename" caption="$general.sitename$" wrap="false" />
+    <column cssclass="filling-column" />
+  </columns>
+  <objecttype name="devtrev_GoogleIntegrations.DefaultTeamDrives" columns="DefaultTeamDrivesID, TeamDriveName, TeamDriveCodeName, TeamDriveID, SiteID"/>
+  <options>
+  </options>
+</grid>

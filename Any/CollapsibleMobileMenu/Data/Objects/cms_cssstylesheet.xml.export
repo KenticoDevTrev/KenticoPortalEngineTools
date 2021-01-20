@@ -1,0 +1,121 @@
+﻿<cms_cssstylesheet version="8.1">
+  <NewDataSet>
+    <cms_cssstylesheet>
+      <StylesheetID>7</StylesheetID>
+      <StylesheetDisplayName>Collapsible Mobile Menu</StylesheetDisplayName>
+      <StylesheetName>CollapsibleMobileMenu</StylesheetName>
+      <StylesheetText>body {
+}
+
+/* Starts off the mobile menu as hidden till the Javascript kicks in */
+.hidden {
+    display: none !important;
+}
+
+
+/**** Container styling ****/
+
+/* Will shrink width wise to fit, but set initial max-width*/
+.mobileMenu {
+    max-width: 600px;
+}
+
+/**** Button Styles ****/
+.toggleButton {
+    background-image: url("/CorporateSite/media/Images/menu-icon.png");
+    background-position: center center;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+}
+
+.toggleButton.opened {
+    background-image: url("/CorporateSite/media/Images/menu-icon-active.png");
+}
+
+.expandable {
+    background-image: url("/CorporateSite/media/Images/plus.png");
+    background-size: contain;
+    display: inline-block;
+    left: -40px;
+    top: 5px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    z-index: 5;
+}
+
+.expandable.opened {
+    background-image: url("/CorporateSite/media/Images/minus.png");
+}
+
+
+/**** List item styling ****/
+
+/* Menu outer styling */
+.mobileNav {
+    background-color: #EAEAEA;
+    border: 3px none #FFFFFF;
+    border-radius: 0 0 5px 5px;
+    list-style: none outside none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+/* Navigation Item Heights */
+.pageContainer, .content {
+    display: inline-block;
+    height: 40px;
+}
+
+/* Adds border in between nav items */
+.pageContainer {
+    border-top: 2px solid #808080;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.mobileMenu &gt; ul &gt; li:first-child &gt; span.pageContainer {
+    border-top: 0;
+}
+
+/* Positions the expand sub menu to right floating */
+.expandableContainer {
+    position: relative;
+    width: 0;
+    float: right;
+}
+
+/* Sets the text of the nav item to be middle aligned */
+.content {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Enable to set icon to left aligned for sub menu hide/show 
+.expandableContainer {
+    float: left;
+    position: relative;
+    width: 0;
+}
+    
+.expandable {
+    right: -10px;
+    left:inherit;
+    top: 5px;
+    width: 30px;
+    z-index: 5;
+}
+
+.content {
+    padding-left: 50px;
+}*/</StylesheetText>
+      <StylesheetVersionGUID>8929666f-8af4-46d5-a7da-616886f3f143</StylesheetVersionGUID>
+      <StylesheetGUID>990c2889-965b-4339-994f-ce0217608b8e</StylesheetGUID>
+      <StylesheetLastModified>2014-05-14T10:10:36.417-05:00</StylesheetLastModified>
+    </cms_cssstylesheet>
+  </NewDataSet>
+</cms_cssstylesheet>

@@ -1,0 +1,55 @@
+﻿<cms_formusercontrol version="10.0">
+  <NewDataSet>
+    <cms_formusercontrol>
+      <UserControlID>609</UserControlID>
+      <UserControlDisplayName>Multiple choice Dual List With Order</UserControlDisplayName>
+      <UserControlCodeName>MultipleChoiceControl_WithOrder</UserControlCodeName>
+      <UserControlFileName>~/CMSFormControls/Custom/MultipleChoiceControl_WithOrder.ascx</UserControlFileName>
+      <UserControlForText>true</UserControlForText>
+      <UserControlForLongText>false</UserControlForLongText>
+      <UserControlForInteger>false</UserControlForInteger>
+      <UserControlForDecimal>false</UserControlForDecimal>
+      <UserControlForDateTime>false</UserControlForDateTime>
+      <UserControlForBoolean>false</UserControlForBoolean>
+      <UserControlForFile>false</UserControlForFile>
+      <UserControlShowInBizForms>true</UserControlShowInBizForms>
+      <UserControlDefaultDataType>Text</UserControlDefaultDataType>
+      <UserControlDefaultDataTypeSize>500</UserControlDefaultDataTypeSize>
+      <UserControlShowInDocumentTypes>true</UserControlShowInDocumentTypes>
+      <UserControlShowInSystemTables>true</UserControlShowInSystemTables>
+      <UserControlShowInWebParts>true</UserControlShowInWebParts>
+      <UserControlShowInReports>true</UserControlShowInReports>
+      <UserControlGUID>c88ed91d-786a-43be-b0a6-14c8ea0edf8d</UserControlGUID>
+      <UserControlLastModified>2014-07-17T09:30:32.4313852-05:00</UserControlLastModified>
+      <UserControlForGuid>false</UserControlForGuid>
+      <UserControlShowInCustomTables>true</UserControlShowInCustomTables>
+      <UserControlForVisibility>false</UserControlForVisibility>
+      <UserControlParameters>&lt;form version="2"&gt;&lt;field column="Options" visible="true" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" publicfield="false" spellcheck="false" guid="56171201-36bb-4e14-89a4-de6cc0b796f4" visibility="none" displayinsimplemode="true" reftype="Required"&gt;&lt;properties&gt;&lt;fielddescription&gt;Selects which type of data source will be used to generate the selection options. When "Options" is selected, each item (box) must be specified in the text area, one per line in format "1;One". When "SQL Query" is specified then an SQL query must be entered, which returns a value and text column to dynamically generate the items.&lt;/fielddescription&gt;&lt;fieldcaption&gt;Data source&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AllowQuery&gt;True&lt;/AllowQuery&gt;&lt;controlname&gt;optionsselector&lt;/controlname&gt;&lt;AllowMacro&gt;True&lt;/AllowMacro&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Sortable" visible="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" publicfield="false" guid="a61f53a2-c6be-4c00-bfb3-d658a036fbbd" reftype="Required" resolvedefaultvalue="False"&gt;&lt;properties&gt;&lt;fielddescription&gt;Allows user to sort items up and down.
+
+If using order in repeaters, doing a Where In statement, you can use the following Order By to keep the same order specified:
+
+CHARINDEX(','+CONVERT(varchar, ItemID)+',', ',1,4,2,3,')&lt;/fielddescription&gt;&lt;defaultvalue&gt;True&lt;/defaultvalue&gt;&lt;fieldcaption&gt;Allow Sorting&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Query" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" publicfield="false" spellcheck="false" guid="259c36ac-c7d0-4cfa-8b17-ace35807f565" visibility="none" reftype="Required"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</UserControlParameters>
+      <UserControlForDocAttachments>false</UserControlForDocAttachments>
+      <UserControlForLongInteger>false</UserControlForLongInteger>
+      <UserControlType>0</UserControlType>
+      <UserControlDescription>Allows specifying multiple selectable values in the form of checkboxes, which can be arranged vertically or horizontally.</UserControlDescription>
+      <UserControlThumbnailGUID>cbac4d8a-a2d5-460f-9416-34afee3a2490</UserControlThumbnailGUID>
+      <UserControlPriority>100</UserControlPriority>
+      <UserControlIsSystem>false</UserControlIsSystem>
+    </cms_formusercontrol>
+    <cms_metafile>
+      <MetaFileID>7248</MetaFileID>
+      <MetaFileObjectID>609</MetaFileObjectID>
+      <MetaFileObjectType>cms.formusercontrol</MetaFileObjectType>
+      <MetaFileGroupName>Thumbnail</MetaFileGroupName>
+      <MetaFileName>checkboxes.png</MetaFileName>
+      <MetaFileExtension>.png</MetaFileExtension>
+      <MetaFileSize>407</MetaFileSize>
+      <MetaFileMimeType>image/png</MetaFileMimeType>
+      <MetaFileImageWidth>95</MetaFileImageWidth>
+      <MetaFileImageHeight>40</MetaFileImageHeight>
+      <MetaFileGUID>cbac4d8a-a2d5-460f-9416-34afee3a2490</MetaFileGUID>
+      <MetaFileLastModified>2014-07-16T15:56:14.5522298-05:00</MetaFileLastModified>
+    </cms_metafile>
+  </NewDataSet>
+</cms_formusercontrol>

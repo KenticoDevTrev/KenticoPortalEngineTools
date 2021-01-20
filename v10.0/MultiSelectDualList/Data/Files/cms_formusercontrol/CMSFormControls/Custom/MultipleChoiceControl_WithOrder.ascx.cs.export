@@ -1,0 +1,173 @@
+using System;
+using System.Text;
+using System.Web.UI.WebControls;
+
+using CMS.FormEngine;
+using CMS.Helpers;
+using CMS.FormEngine.Web.UI;
+
+
+public partial class CMSFormControls_Custom_MultipleChoiceControl_WithOrder : FormEngineUserControl
+{
+    #region "Variables"
+
+    private string[] selectedValues = null;
+
+    #endregion
+
+
+    #region "Properties"
+
+    /// <summary>
+    /// Gets or sets the enabled state of the control.
+    /// </summary>
+    public override bool Enabled
+    {
+        get
+        {
+            return list.Enabled;
+        }
+        set
+        {
+            list.Enabled = value;
+        }
+    }
+
+
+    /// <summary>
+    /// Gets or sets form control value.
+    /// </summary>
+    public override object Value
+    {
+        get
+        {
+            return selectedItems.Text;
+            //return FormHelper.GetSelectedValuesFromListItemCollection(list.Items);
+        }
+        set
+        {
+			selectedValues = ValidationHelper.GetString(value, String.Empty).Split('|');
+			previousItems.Text = ValidationHelper.GetString(value, String.Empty);
+			LoadAndSelectList();
+        }
+    }
+
+
+    /// <summary>
+    /// Returns selected value display names separated with comma.
+    /// </summary>
+    public override string ValueDisplayName
+    {
+        get
+        {
+            StringBuilder text = new StringBuilder();
+            bool first = true;
+            foreach (ListItem item in list.Items)
+            {
+                if (item.Selected)
+                {
+                    if (!first)
+                    {
+                        text.Append(", ");
+                    }
+                    text.Append(item.Text);
+                    first = false;
+                }
+            }
+            return text.ToString();
+        }
+    }
+
+    #endregion
+
+
+    #region "Methods"
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        LoadAndSelectList();
+
+        // Set control styles
+        if (!String.IsNullOrEmpty(CssClass))
+        {
+            list.CssClass += CssClass;
+            selected.CssClass += CssClass;
+            CssClass = null;
+        }
+        else if (String.IsNullOrEmpty(list.CssClass))
+        {
+            list.CssClass += "CheckBoxListField";
+            selected.CssClass += "CheckBoxListField";
+        }
+        if (!String.IsNullOrEmpty(ControlStyle))
+        {
+            list.Attributes.Add("style", ControlStyle);
+            selected.Attributes.Add("style", ControlStyle);
+            ControlStyle = null;
+        }
+
+        CheckRegularExpression = true;
+        CheckFieldEmptiness = true;
+    }
+
+
+    /// <summary>
+    /// Loads and selects control.
+    /// </summary>
+    private void LoadAndSelectList()
+    {
+        if (list.Items.Count == 0)
+        {
+
+            string options = GetResolvedValue<string>("options", null);
+            string query = ValidationHelper.GetString(GetValue("query"), null);
+            string macro = ValidationHelper.GetString(GetValue("macro"), null);
+            // Grab if it's sortable or not.
+            bool sortable = ValidationHelper.GetBoolean(GetValue("Sortable"), true);
+            pnlSortButtons.Visible = sortable;
+            try
+            {
+                
+                var FieldDefs = new SpecialFieldsDefinition(null, FieldInfo, ContextResolver, sortable);
+                if(!string.IsNullOrWhiteSpace(query)) {
+                var FieldQueryItems = FieldDefs.LoadFromQuery(query, CMS.DataEngine.QueryTypeEnum.SQLQuery);
+                     FieldQueryItems.FillItems(list.Items);
+                    } else if (!string.IsNullOrWhiteSpace(macro)) {
+                        var FieldQueryItems = FieldDefs.LoadFromMacro(macro);
+                     FieldQueryItems.FillItems(list.Items);
+                    }
+                else if (!string.IsNullOrWhiteSpace(options))
+                {
+                    var FieldQueryItems = FieldDefs.LoadFromText(options);
+                    FieldQueryItems.FillItems(list.Items);
+                }
+               
+                //FormHelper.LoadItemsIntoList(options, query, list.Items, FieldInfo, ContextResolver);
+            }
+            catch (Exception ex)
+            {
+                DisplayException(ex);
+            }
+            // Cancels this as this is done in Javascript
+            // FormHelper.SelectMultipleValues(selectedValues, list.Items, ListSelectionMode.Multiple);
+            previousItems.Text = selectedValues.Join("|");
+        }
+    }
+
+
+    /// <summary>
+    /// Displays exception control with current error.
+    /// </summary>
+    /// <param name="ex">Thrown exception</param>
+    private void DisplayException(Exception ex)
+    {
+        FormControlError ctrlError = new FormControlError();
+        ctrlError.FormControlName = FormFieldControlTypeCode.MULTIPLECHOICE;
+        ctrlError.InnerException = ex;
+        Controls.Add(ctrlError);
+        list.Visible = false;
+        selected.Visible = false;
+    }
+
+    #endregion
+}

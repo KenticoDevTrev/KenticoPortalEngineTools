@@ -1,0 +1,18 @@
+﻿<cms_webpartcontainer version="8.1">
+  <NewDataSet>
+    <cms_webpartcontainer>
+      <ContainerID>19</ContainerID>
+      <ContainerDisplayName>CollapsibleMobileMenu</ContainerDisplayName>
+      <ContainerName>CollapsibleMobileMenu</ContainerName>
+      <ContainerTextBefore>&lt;div class="mobileMenu"&gt;
+  &lt;div class="toggleButton"&gt;
+  &lt;/div&gt;
+  </ContainerTextBefore>
+      <ContainerTextAfter>
+&lt;/div&gt;</ContainerTextAfter>
+      <ContainerGUID>f685964c-4e38-4d62-9343-b635a48eb317</ContainerGUID>
+      <ContainerLastModified>2014-05-14T10:10:19.42-05:00</ContainerLastModified>
+      <ContainerCSS></ContainerCSS>
+    </cms_webpartcontainer>
+  </NewDataSet>
+</cms_webpartcontainer>

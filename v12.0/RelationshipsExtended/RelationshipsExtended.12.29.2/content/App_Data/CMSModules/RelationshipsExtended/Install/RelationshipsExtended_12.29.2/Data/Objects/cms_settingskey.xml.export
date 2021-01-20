@@ -1,0 +1,102 @@
+﻿<cms_settingskey version="12.0">
+  <NewDataSet>
+    <cms_settingskey>
+      <KeyID>70749</KeyID>
+      <KeyName>NodeCategoryStagingMode</KeyName>
+      <KeyDisplayName>Node Category Staging Mode</KeyDisplayName>
+      <KeyDescription>Determines how the Node Categories staging tasks should be generated.
+
+Group with Document
+
+This means any Node Category changes will generate a "Document Update Task" (which means the entire document must push to push these changes).  This also allows you to re-syncing a document's Node Categories by re-synchronizing the document.
+
+Create Individual Tasks
+
+This will generate a task for each add/removal of a node category, meaning you can push these changes without pushing an update to the document itself. 
+
+However, in order to do a full re-sync, you would need to delete all the Node-Category relationships on the target server, then run the full sync on the source server by going to  Staging -&gt; Objects -&gt; Global Objects -&gt; Node Categories -&gt; Node Category and clicking on the "Synchronize current subtree" in order to re-sync all the node categories properly.
+
+Alternatively, you can switch back to "Group with Document" on both environments, restart the application pool, and re-sync the documents.</KeyDescription>
+      <KeyValue>WithDocument</KeyValue>
+      <KeyType>string</KeyType>
+      <KeyCategoryID>1107</KeyCategoryID>
+      <KeyGUID>4b766aaa-314b-4739-a3b2-3cdf569f4cec</KeyGUID>
+      <KeyLastModified>2018-11-12T13:29:12.1739783-06:00</KeyLastModified>
+      <KeyOrder>1</KeyOrder>
+      <KeyDefaultValue>WithDocument</KeyDefaultValue>
+      <KeyEditingControlPath>DropDownListControl</KeyEditingControlPath>
+      <KeyIsGlobal>false</KeyIsGlobal>
+      <KeyIsHidden>false</KeyIsHidden>
+      <KeyFormControlSettings>&lt;settings&gt;&lt;DisplayActualValueAsItem&gt;False&lt;/DisplayActualValueAsItem&gt;&lt;EditText&gt;False&lt;/EditText&gt;&lt;Options&gt;WithDocument;Group with Document
+Individually;Create Individual Tasks&lt;/Options&gt;&lt;SortItems&gt;False&lt;/SortItems&gt;&lt;/settings&gt;</KeyFormControlSettings>
+      <KeyExplanationText>Hover over for description.  &lt;br/&gt;Must Restart Application for changes to take affect (System -&amp;gt; Restart Application).  &lt;br/&gt;Must be the same on all environments.</KeyExplanationText>
+    </cms_settingskey>
+    <cms_settingskey>
+      <KeyID>70750</KeyID>
+      <KeyName>CacheRelationshipWhereGeneration</KeyName>
+      <KeyDisplayName>Cache Relationship WHERE Generation</KeyDisplayName>
+      <KeyDescription>If true, it will cache the relationship WHERE conditions generated from the RelHelper.Get_____ methods.</KeyDescription>
+      <KeyValue>True</KeyValue>
+      <KeyType>boolean</KeyType>
+      <KeyCategoryID>1106</KeyCategoryID>
+      <KeyGUID>5ae0195f-5aca-437f-8b44-b8e34322cae0</KeyGUID>
+      <KeyLastModified>2018-09-25T15:28:08.4388073-05:00</KeyLastModified>
+      <KeyOrder>1</KeyOrder>
+      <KeyDefaultValue>True</KeyDefaultValue>
+      <KeyIsGlobal>false</KeyIsGlobal>
+      <KeyIsHidden>false</KeyIsHidden>
+      <KeyExplanationText></KeyExplanationText>
+    </cms_settingskey>
+    <cms_settingscategory>
+      <CategoryID>150</CategoryID>
+      <CategoryDisplayName>{$settingscategory.cmssettings$}</CategoryDisplayName>
+      <CategoryOrder>0</CategoryOrder>
+      <CategoryName>CMS.Settings</CategoryName>
+      <CategoryIDPath>/00000150</CategoryIDPath>
+      <CategoryLevel>0</CategoryLevel>
+      <CategoryChildCount>13</CategoryChildCount>
+      <CategoryIsGroup>false</CategoryIsGroup>
+      <CategoryIsCustom>false</CategoryIsCustom>
+      <CategoryResourceID>325</CategoryResourceID>
+    </cms_settingscategory>
+    <cms_settingscategory>
+      <CategoryID>1105</CategoryID>
+      <CategoryDisplayName>Relationship Extended</CategoryDisplayName>
+      <CategoryOrder>0</CategoryOrder>
+      <CategoryName>RelationshipExtended</CategoryName>
+      <CategoryParentID>150</CategoryParentID>
+      <CategoryIDPath>/00000150/00001105</CategoryIDPath>
+      <CategoryLevel>1</CategoryLevel>
+      <CategoryChildCount>2</CategoryChildCount>
+      <CategoryIconPath></CategoryIconPath>
+      <CategoryIsGroup>false</CategoryIsGroup>
+      <CategoryResourceID>453</CategoryResourceID>
+    </cms_settingscategory>
+    <cms_settingscategory>
+      <CategoryID>1106</CategoryID>
+      <CategoryDisplayName>Caching</CategoryDisplayName>
+      <CategoryOrder>1</CategoryOrder>
+      <CategoryName>RelationshipExtended_Caching</CategoryName>
+      <CategoryParentID>1105</CategoryParentID>
+      <CategoryIDPath>/00000150/00001105/00001106</CategoryIDPath>
+      <CategoryLevel>2</CategoryLevel>
+      <CategoryChildCount>0</CategoryChildCount>
+      <CategoryIconPath></CategoryIconPath>
+      <CategoryIsGroup>true</CategoryIsGroup>
+      <CategoryResourceID>453</CategoryResourceID>
+    </cms_settingscategory>
+    <cms_settingscategory>
+      <CategoryID>1107</CategoryID>
+      <CategoryDisplayName>Node Categories</CategoryDisplayName>
+      <CategoryOrder>2</CategoryOrder>
+      <CategoryName>NodeCategories</CategoryName>
+      <CategoryParentID>1105</CategoryParentID>
+      <CategoryIDPath>/00000150/00001105/00001107</CategoryIDPath>
+      <CategoryLevel>2</CategoryLevel>
+      <CategoryChildCount>0</CategoryChildCount>
+      <CategoryIconPath></CategoryIconPath>
+      <CategoryIsGroup>true</CategoryIsGroup>
+      <CategoryResourceID>453</CategoryResourceID>
+    </cms_settingscategory>
+  </NewDataSet>
+</cms_settingskey>

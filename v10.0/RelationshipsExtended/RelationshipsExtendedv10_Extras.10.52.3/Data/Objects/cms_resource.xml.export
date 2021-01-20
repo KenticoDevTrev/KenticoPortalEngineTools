@@ -1,0 +1,185 @@
+﻿<cms_resource version="10.0">
+  <NewDataSet>
+    <cms_resource>
+      <ResourceID>1438</ResourceID>
+      <ResourceDisplayName>Relationships Extended</ResourceDisplayName>
+      <ResourceName>RelationshipsExtended</ResourceName>
+      <ResourceDescription>For Kentico CMS
+Extends the Relationships to allow usage of Ad-hoc relationships (which allow order by) within the Relationship UI, add Node Categories, UI templates and tools to manage Many-To-Many relationships between Nodes and Objects and Objects to Objects, with Ordering support, and Macros and methods to leverage these features.
+
+Use with Kentico Hotfix 10.52 and above only.</ResourceDescription>
+      <ShowInDevelopment>false</ShowInDevelopment>
+      <ResourceGUID>db284408-3064-4a98-97d7-91bc467772f2</ResourceGUID>
+      <ResourceLastModified>2020-09-04T12:17:25.0853053-05:00</ResourceLastModified>
+      <ResourceIsInDevelopment>false</ResourceIsInDevelopment>
+      <ResourceHasFiles>false</ResourceHasFiles>
+      <ResourceVersion>10.52.4</ResourceVersion>
+      <ResourceAuthor>Trevor Fayas (www.devtrev.com)</ResourceAuthor>
+    </cms_resource>
+    <cms_uielement>
+      <ElementID>4630</ElementID>
+      <ElementDisplayName>Relationship names Extended</ElementDisplayName>
+      <ElementName>Development.RelationshipNamesExtended</ElementName>
+      <ElementCaption>Relationship names Extended</ElementCaption>
+      <ElementResourceID>1438</ElementResourceID>
+      <ElementParentID>1197</ElementParentID>
+      <ElementChildCount>2</ElementChildCount>
+      <ElementOrder>18</ElementOrder>
+      <ElementLevel>3</ElementLevel>
+      <ElementIDPath>/00002824/00001166/00001197/00004630</ElementIDPath>
+      <ElementIconPath></ElementIconPath>
+      <ElementIsCustom>false</ElementIsCustom>
+      <ElementLastModified>2018-09-25T19:47:01.8999981-05:00</ElementLastModified>
+      <ElementGUID>335fbb22-2855-45cf-af4e-1a0f49b1e888</ElementGUID>
+      <ElementSize>0</ElementSize>
+      <ElementDescription>Allows you to prepare relationship types for pages and system objects, including ad-hoc relationships.
+
+To create relationships between pages, create additional UI interfaces using the "edit relationships" template.</ElementDescription>
+      <ElementPageTemplateID>21221</ElementPageTemplateID>
+      <ElementType>PageTemplate</ElementType>
+      <ElementProperties>&lt;Data&gt;&lt;DisplayBreadcrumbs&gt;False&lt;/DisplayBreadcrumbs&gt;&lt;EditInDialog&gt;True&lt;/EditInDialog&gt;&lt;ExtenderClassName&gt;RelationshipNameListExtender&lt;/ExtenderClassName&gt;&lt;GridExtender&gt;App_Code&lt;/GridExtender&gt;&lt;ObjectType&gt;cms.relationshipname&lt;/ObjectType&gt;&lt;OpenInDialog&gt;False&lt;/OpenInDialog&gt;&lt;/Data&gt;</ElementProperties>
+      <ElementIsMenu>false</ElementIsMenu>
+      <ElementIconClass>icon-app-relationship-names</ElementIconClass>
+      <ElementIsGlobalApplication>false</ElementIsGlobalApplication>
+      <ElementCheckModuleReadPermission>true</ElementCheckModuleReadPermission>
+    </cms_uielement>
+    <cms_uielement>
+      <ElementID>4631</ElementID>
+      <ElementDisplayName>Edit relationship name</ElementDisplayName>
+      <ElementName>EditRelationshipNameExtended</ElementName>
+      <ElementCaption>Relationship name properties</ElementCaption>
+      <ElementResourceID>1438</ElementResourceID>
+      <ElementParentID>4630</ElementParentID>
+      <ElementChildCount>2</ElementChildCount>
+      <ElementOrder>1</ElementOrder>
+      <ElementLevel>4</ElementLevel>
+      <ElementIDPath>/00002824/00001166/00001197/00004630/00004631</ElementIDPath>
+      <ElementIsCustom>false</ElementIsCustom>
+      <ElementLastModified>2018-09-25T19:49:02.7360805-05:00</ElementLastModified>
+      <ElementGUID>e3d9a922-5f27-4764-8e8d-05a6ca108169</ElementGUID>
+      <ElementSize>0</ElementSize>
+      <ElementPageTemplateID>21179</ElementPageTemplateID>
+      <ElementType>PageTemplate</ElementType>
+      <ElementProperties>&lt;Data&gt;&lt;AllowSubTabs&gt;True&lt;/AllowSubTabs&gt;&lt;category_name_Breadcrumbs&gt;False&lt;/category_name_Breadcrumbs&gt;&lt;DisplayBreadcrumbs&gt;True&lt;/DisplayBreadcrumbs&gt;&lt;DisplayTitleInTabs&gt;False&lt;/DisplayTitleInTabs&gt;&lt;RememberSelectedTab&gt;False&lt;/RememberSelectedTab&gt;&lt;/Data&gt;</ElementProperties>
+      <ElementIsMenu>false</ElementIsMenu>
+      <ElementIconClass></ElementIconClass>
+      <ElementIsGlobalApplication>false</ElementIsGlobalApplication>
+      <ElementCheckModuleReadPermission>false</ElementCheckModuleReadPermission>
+    </cms_uielement>
+    <cms_uielement>
+      <ElementID>4632</ElementID>
+      <ElementDisplayName>New relationship name</ElementDisplayName>
+      <ElementName>NewRelationshipNameExtended</ElementName>
+      <ElementCaption>New relationship name</ElementCaption>
+      <ElementResourceID>1438</ElementResourceID>
+      <ElementParentID>4630</ElementParentID>
+      <ElementChildCount>0</ElementChildCount>
+      <ElementOrder>2</ElementOrder>
+      <ElementLevel>4</ElementLevel>
+      <ElementIDPath>/00002824/00001166/00001197/00004630/00004632</ElementIDPath>
+      <ElementIsCustom>false</ElementIsCustom>
+      <ElementLastModified>2018-09-25T19:48:45.5813652-05:00</ElementLastModified>
+      <ElementGUID>a78ba914-9329-4fa7-8cbd-d01dc380a3fc</ElementGUID>
+      <ElementSize>0</ElementSize>
+      <ElementPageTemplateID>21222</ElementPageTemplateID>
+      <ElementType>PageTemplate</ElementType>
+      <ElementProperties>&lt;Data&gt;&lt;AlternativeFormName&gt;NewForm&lt;/AlternativeFormName&gt;&lt;category_name_Breadcrumbs&gt;False&lt;/category_name_Breadcrumbs&gt;&lt;DefaultFieldLayout&gt;twocolumns&lt;/DefaultFieldLayout&gt;&lt;DefaultFormLayout&gt;Divs&lt;/DefaultFormLayout&gt;&lt;DisplayBreadcrumbs&gt;False&lt;/DisplayBreadcrumbs&gt;&lt;includejquery&gt;false&lt;/includejquery&gt;&lt;ObjectType&gt;cms.relationshipname&lt;/ObjectType&gt;&lt;/Data&gt;</ElementProperties>
+      <ElementIsMenu>false</ElementIsMenu>
+      <ElementIconClass></ElementIconClass>
+      <ElementIsGlobalApplication>false</ElementIsGlobalApplication>
+      <ElementCheckModuleReadPermission>false</ElementCheckModuleReadPermission>
+    </cms_uielement>
+    <cms_uielement>
+      <ElementID>4633</ElementID>
+      <ElementDisplayName>General</ElementDisplayName>
+      <ElementName>GeneralExtended</ElementName>
+      <ElementCaption>General</ElementCaption>
+      <ElementResourceID>1438</ElementResourceID>
+      <ElementParentID>4631</ElementParentID>
+      <ElementChildCount>0</ElementChildCount>
+      <ElementOrder>1</ElementOrder>
+      <ElementLevel>5</ElementLevel>
+      <ElementIDPath>/00002824/00001166/00001197/00004630/00004631/00004633</ElementIDPath>
+      <ElementIsCustom>false</ElementIsCustom>
+      <ElementLastModified>2018-09-25T19:34:49.165732-05:00</ElementLastModified>
+      <ElementGUID>320809dc-5614-4d20-b9d3-4a23edad9c0f</ElementGUID>
+      <ElementSize>0</ElementSize>
+      <ElementPageTemplateID>21222</ElementPageTemplateID>
+      <ElementType>PageTemplate</ElementType>
+      <ElementProperties>&lt;Data&gt;&lt;AlternativeFormName&gt;EditForm&lt;/AlternativeFormName&gt;&lt;category_name_CodeBehind&gt;False&lt;/category_name_CodeBehind&gt;&lt;category_name_Custom&gt;False&lt;/category_name_Custom&gt;&lt;DefaultFieldLayout&gt;twocolumns&lt;/DefaultFieldLayout&gt;&lt;DefaultFormLayout&gt;Divs&lt;/DefaultFormLayout&gt;&lt;DisplayBreadcrumbs&gt;False&lt;/DisplayBreadcrumbs&gt;&lt;ObjectType&gt;cms.relationshipname&lt;/ObjectType&gt;&lt;/Data&gt;</ElementProperties>
+      <ElementIsMenu>false</ElementIsMenu>
+      <ElementIconClass></ElementIconClass>
+      <ElementIsGlobalApplication>false</ElementIsGlobalApplication>
+      <ElementCheckModuleReadPermission>false</ElementCheckModuleReadPermission>
+    </cms_uielement>
+    <cms_uielement>
+      <ElementID>4634</ElementID>
+      <ElementDisplayName>Sites</ElementDisplayName>
+      <ElementName>SitesExtended</ElementName>
+      <ElementCaption>Sites</ElementCaption>
+      <ElementResourceID>1438</ElementResourceID>
+      <ElementParentID>4631</ElementParentID>
+      <ElementChildCount>0</ElementChildCount>
+      <ElementOrder>2</ElementOrder>
+      <ElementLevel>5</ElementLevel>
+      <ElementIDPath>/00002824/00001166/00001197/00004630/00004631/00004634</ElementIDPath>
+      <ElementIsCustom>false</ElementIsCustom>
+      <ElementLastModified>2018-09-25T19:35:47.8105959-05:00</ElementLastModified>
+      <ElementGUID>6ed79baa-cc3d-4b59-b830-c3aeb02b12da</ElementGUID>
+      <ElementSize>0</ElementSize>
+      <ElementPageTemplateID>21246</ElementPageTemplateID>
+      <ElementType>PageTemplate</ElementType>
+      <ElementProperties>&lt;Data&gt;&lt;bindingobjectprovidertype&gt;CMS.RelationshipNameSite&lt;/bindingobjectprovidertype&gt;&lt;BindingObjectType&gt;cms.relationshipnamesite&lt;/BindingObjectType&gt;&lt;category_name_CodeBehind&gt;False&lt;/category_name_CodeBehind&gt;&lt;category_name_Custom&gt;False&lt;/category_name_Custom&gt;&lt;checkmodifypermission&gt;True&lt;/checkmodifypermission&gt;&lt;DisplayBreadcrumbs&gt;False&lt;/DisplayBreadcrumbs&gt;&lt;includejquery&gt;False&lt;/includejquery&gt;&lt;ListPrefaceText&gt;The relationship name is available for the following websites:&lt;/ListPrefaceText&gt;&lt;ResourcePrefix&gt;siteselector&lt;/ResourcePrefix&gt;&lt;WhereCondition&gt;RelationshipNameID = {% ToInt(UIContext.ObjectID) |(user)administrator|(hash)9435ffd7a8c751a82e2418b31d220a5b8ce4351a9b3ba33dc0c33f0c8af1accd%}&lt;/WhereCondition&gt;&lt;/Data&gt;</ElementProperties>
+      <ElementIsMenu>false</ElementIsMenu>
+      <ElementIconClass></ElementIconClass>
+      <ElementIsGlobalApplication>false</ElementIsGlobalApplication>
+      <ElementCheckModuleReadPermission>false</ElementCheckModuleReadPermission>
+    </cms_uielement>
+    <cms_uielement>
+      <ElementID>4645</ElementID>
+      <ElementDisplayName>Node Categories</ElementDisplayName>
+      <ElementName>NodeCategories</ElementName>
+      <ElementResourceID>1438</ElementResourceID>
+      <ElementParentID>1201</ElementParentID>
+      <ElementChildCount>0</ElementChildCount>
+      <ElementOrder>6</ElementOrder>
+      <ElementLevel>6</ElementLevel>
+      <ElementIDPath>/00002824/00001166/00001167/00001165/00003954/00001201/00004645</ElementIDPath>
+      <ElementIsCustom>false</ElementIsCustom>
+      <ElementLastModified>2019-02-03T22:28:23.3298936-06:00</ElementLastModified>
+      <ElementGUID>9179343f-5238-4e99-94c1-976c08e838cd</ElementGUID>
+      <ElementSize>0</ElementSize>
+      <ElementPageTemplateID>26837</ElementPageTemplateID>
+      <ElementType>PageTemplate</ElementType>
+      <ElementProperties>&lt;Data&gt;&lt;CategoryDisplayMode&gt;Tree&lt;/CategoryDisplayMode&gt;&lt;DisplayBreadcrumbs&gt;False&lt;/DisplayBreadcrumbs&gt;&lt;ExpandToLevel&gt;1&lt;/ExpandToLevel&gt;&lt;FieldSaveType&gt;ID&lt;/FieldSaveType&gt;&lt;JoinTableForeignKeySource&gt;Page&lt;/JoinTableForeignKeySource&gt;&lt;ObjectType&gt;cms.node&lt;/ObjectType&gt;&lt;OnlyLeafSelectable&gt;False&lt;/OnlyLeafSelectable&gt;&lt;ParentSelectsChildren&gt;False&lt;/ParentSelectsChildren&gt;&lt;SaveMode&gt;ToNodeCategories&lt;/SaveMode&gt;&lt;/Data&gt;</ElementProperties>
+      <ElementIsMenu>false</ElementIsMenu>
+      <ElementIconClass></ElementIconClass>
+      <ElementIsGlobalApplication>false</ElementIsGlobalApplication>
+      <ElementCheckModuleReadPermission>true</ElementCheckModuleReadPermission>
+    </cms_uielement>
+    <cms_permission>
+      <PermissionID>15698</PermissionID>
+      <PermissionDisplayName>Read</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ResourceID>1438</ResourceID>
+      <PermissionGUID>6d90b049-a9fe-4715-b1bf-d1ca1ba1ac29</PermissionGUID>
+      <PermissionLastModified>2018-10-29T11:07:45.6461133-05:00</PermissionLastModified>
+      <PermissionDescription>Read permission</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+      <PermissionEditableByGlobalAdmin>true</PermissionEditableByGlobalAdmin>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>15699</PermissionID>
+      <PermissionDisplayName>Modify</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ResourceID>1438</ResourceID>
+      <PermissionGUID>078af38d-bb22-432b-b650-d6b0aea1f2b9</PermissionGUID>
+      <PermissionLastModified>2018-10-29T11:07:59.2724758-05:00</PermissionLastModified>
+      <PermissionDescription>Modify Perimission</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+      <PermissionEditableByGlobalAdmin>true</PermissionEditableByGlobalAdmin>
+    </cms_permission>
+  </NewDataSet>
+</cms_resource>

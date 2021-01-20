@@ -1,0 +1,26 @@
+Instructions:
+
+This mobile menu implementation allows for an simple Mobile Menu with collapsable sub-navigation elements.
+
+The Kentico Export contains 3 items:
+	-A Custom Document Type (CollapsibleMobileMenu) which holds the Hierarchy Transformation
+	-A CSS File (Collapsible Mobile Menu) which contains the styling
+	-A Web Part Container (CollapsibleMobileMenu) which adds the header div and the toggle button div
+	-A Javascript (CollapsibleMobileMenu) which holds the javascript to run the menu, this is imported behind the scenes.
+
+There are also 4 base images that are provided in this project that should be imported and the CSS adjusted, however these can and should be replaced with better images.
+
+
+Once items are imported and the Web part container and css are included to the current site, to utilize the menu...
+
+1: Add a Universal Viewer Web part
+	a: Set Path, Document types, etc.
+	b: Hierarchical Transformation, select custom.collapsiblemobilemenu.CollapsibleMobileMenuHierarchy
+	c: Be sure to check "Load Hierarchical Data" in Extended Settings
+	d: Set webpart container to CollapsibleMobileMenu
+
+2: Add the CSS Style sheet to the page
+3: Add the Javascript to the page, setting it as a Startup Script, including jQuery and placing in the header.
+
+
+Lastly, there are some CSS and JS items commented out that you can enable to extend functionality, such as collapse on click outside of the menu, or collapse all sub menus when the mobile menu is collapsed, or to left-align the expanding icon in the menu.

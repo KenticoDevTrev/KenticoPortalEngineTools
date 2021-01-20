@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>RelationshipsExtended</id>
+    <version>12.29.5</version>
+    <title>Kentico Relationships Extended</title>
+    <authors>Trevor Fayas (www.devtrev.com)</authors>
+    <owners>Trevor Fayas (www.devtrev.com)</owners>
+    <projectUrl>https://github.com/KenticoDevTrev/RelationshipsExtended</projectUrl>
+    <iconUrl>https://www.kentico.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>For Kentico CMS
+Extends the Relationships to allow usage of Ad-hoc relationships (which allow order by) within the Relationship UI, add Node Categories, UI templates and tools to manage Many-To-Many relationships between Nodes and Objects and Objects to Objects, with Ordering support, and Macros and methods to leverage these features.
+
+For use on Kentico 12 SP1</description>
+    <releaseNotes>Fixed major bug where only UpdateDocument tasks would be recreated for other servers on receiving server (ex Dev-Staging-Live, staging would not generate tasks from dev for the Live server properly).</releaseNotes>
+    <tags>Kentico Relationships Extended RelationshipsExtended Categories</tags>
+  </metadata>
+</package>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>HBS_CSVImport</id>
+    <version>10.1.1</version>
+    <title>CSV Import</title>
+    <authors>HBS.Net (Trevor Fayas)</authors>
+    <owners>HBS.Net (Trevor Fayas)</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>For Kentico CMS v10.0 Only
+
+Allows a user to use a CSV (comma separated value) file to perform mass import, update, and deletes on Custom Tables, Form Tables and Custom Module Classes.</description>
+  </metadata>
+</package>

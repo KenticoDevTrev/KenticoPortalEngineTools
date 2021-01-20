@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>PageBuilderContainers.Kentico</id>
+    <version>13.0.0</version>
+    <title>Kentico Page Builder Containers</title>
+    <authors>Trevor Fayas (TFayas@hbs.net)</authors>
+    <owners>Trevor Fayas (TFayas@hbs.net)</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/KenticoDevTrev/PageBuilderContainers</projectUrl>
+    <iconUrl>https://www.hbs.net/HBS/media/Favicon/favicon-96x96.png</iconUrl>
+    <description>Add Widget Containers functionality to MVC Page Builder.   This package is for the Kentico Application (Mother).</description>
+    <releaseNotes>Release for Kentico Xperience 13</releaseNotes>
+    <tags>Kentico MVC Page Builder Containers</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Kentico.Xperience.Libraries" version="13.0.0" exclude="Build,Analyzers" />
+        <dependency id="PageBuilderContainers.Kentico.Base" version="13.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

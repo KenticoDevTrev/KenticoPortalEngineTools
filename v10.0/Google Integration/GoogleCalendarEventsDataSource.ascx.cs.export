@@ -1,0 +1,421 @@
+using System;
+using System.Data;
+using System.Collections;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+using CMS.PortalEngine.Web.UI;
+using CMS.Helpers;
+
+public partial class CMSModules_devtrev_GoogleIntegrations_UI : CMSAbstractWebPart
+{
+    #region "Custom Properties"
+
+    public string CalendarIDs
+    {
+        get
+        {
+            return ValidationHelper.GetString(GetValue("CalendarIDs"), "");
+        }
+        set
+        {
+            this.SetValue("CalendarIDs", value);
+            dsGoogleCalendarEvents.CalendarIDs = value;
+        }
+    }
+
+    public DateTime? TimeMax
+    {
+        get
+        {
+            if (ValidationHelper.GetDateTime(GetValue("TimeMax"), new DateTime()) == new DateTime())
+            {
+                return null;
+            }
+            else {
+                return ValidationHelper.GetDateTime(GetValue("TimeMax"), DateTime.Now.AddYears(100));
+            }
+        }
+        set
+        {
+            this.SetValue("TimeMax", value);
+            dsGoogleCalendarEvents.TimeMax = value;
+        }
+    }
+
+    public DateTime? TimeMin
+    {
+        get
+        {
+            if (ValidationHelper.GetDateTime(GetValue("TimeMin"), new DateTime()) == new DateTime())
+            {
+                return null;
+            }
+            else
+            {
+                return ValidationHelper.GetDateTime(GetValue("TimeMin"), DateTime.Now);
+            }
+        }
+        set
+        {
+            this.SetValue("TimeMin", value);
+            dsGoogleCalendarEvents.TimeMin = value;
+        }
+    }
+
+    public string TimeZone
+    {
+        get
+        {
+            return ValidationHelper.GetString(GetValue("TimeZone"), null);
+        }
+        set
+        {
+            this.SetValue("TimeZone", value);
+            dsGoogleCalendarEvents.TimeZone = value;
+        }
+    }
+
+    public string Query
+    {
+        get
+        {
+            return ValidationHelper.GetString(GetValue("Query"), null);
+        }
+        set
+        {
+            this.SetValue("Query", value);
+            dsGoogleCalendarEvents.Query = value;
+        }
+    }
+
+    public bool? SingleEvents
+    {
+        get
+        {
+            return (GetValue("SingleEvents") == "" ? null : (bool?)ValidationHelper.GetBoolean(GetValue("SingleEvents"), false));
+        }
+        set
+        {
+            this.SetValue("SingleEvents", value);
+            dsGoogleCalendarEvents.SingleEvents = value;
+        }
+    }
+
+    public int GoogleOrderBy
+    {
+        get
+        {
+            return ValidationHelper.GetInteger(GetValue("GoogleOrderBy"), 0);
+        }
+        set
+        {
+            this.SetValue("GoogleOrderBy", value);
+            dsGoogleCalendarEvents.OrderByCode = value;
+        }
+    }
+
+    public bool IncludeAttachments
+    {
+        get
+        {
+            return ValidationHelper.GetBoolean(GetValue("IncludeAttachments"), true);
+        }
+        set
+        {
+            this.SetValue("IncludeAttachments", value);
+            dsGoogleCalendarEvents.IncludeAttachments = value;
+        }
+    }
+    public bool IncludeAttendees
+    {
+        get
+        {
+            return ValidationHelper.GetBoolean(GetValue("IncludeAttendees"), true);
+        }
+        set
+        {
+            this.SetValue("IncludeAttendees", value);
+            dsGoogleCalendarEvents.IncludeAttendees = value;
+        }
+    }
+    public int? MaxResults
+    {
+        get
+        {
+            return (ValidationHelper.GetInteger(GetValue("MaxResults"), -1) == -1 ? null : (int?)ValidationHelper.GetInteger(GetValue("MaxResults"), -1));
+        }
+        set
+        {
+            this.SetValue("MaxResults", value);
+            dsGoogleCalendarEvents.MaxResults = (ValidationHelper.GetInteger(value, -1) > -1 ? value : null);
+        }
+    }
+    public bool? ShowDeleted
+    {
+        get
+        {
+            return (GetValue("ShowDeleted") == "" ? null : (bool?)ValidationHelper.GetBoolean(GetValue("ShowDeleted"), false));
+        }
+        set
+        {
+            this.SetValue("ShowDeleted", value);
+            dsGoogleCalendarEvents.ShowDeleted = value;
+        }
+    }
+    public bool? ShowHiddenInvitations
+    {
+        get
+        {
+            return (GetValue("ShowHiddenInvitations") == "" ? null : (bool?)ValidationHelper.GetBoolean(GetValue("ShowHiddenInvitations"), false));
+        }
+        set
+        {
+            this.SetValue("ShowHiddenInvitations", value);
+            dsGoogleCalendarEvents.ShowHiddenInvitation = value;
+        }
+    }
+    public bool? PrettyPrint
+    {
+        get
+        {
+            return (GetValue("PrettyPrint") == "" ? null : (bool?)ValidationHelper.GetBoolean(GetValue("PrettyPrint"), false));
+        }
+        set
+        {
+            this.SetValue("PrettyPrint", value);
+            dsGoogleCalendarEvents.PrettyPrint = value;
+        }
+    }
+
+    public bool TrackByUserIP
+    {
+        get
+        {
+            return ValidationHelper.GetBoolean(GetValue("TrackByUserIP"), false);
+        }
+        set
+        {
+            this.SetValue("TrackByUserIP", value);
+            dsGoogleCalendarEvents.UserIp = (value ? HttpContext.Current.Request.UserHostAddress : null);
+        }
+    }
+
+    public bool? AlwaysIncludeEmail
+    {
+        get
+        {
+            return (GetValue("AlwaysIncludeEmail") == "" ? null : (bool?)ValidationHelper.GetBoolean(GetValue("AlwaysIncludeEmail"), false));
+        }
+        set
+        {
+            this.SetValue("AlwaysIncludeEmail", value);
+            dsGoogleCalendarEvents.AlwaysIncludeEmail = value;
+        }
+    }
+    public string Fields
+    {
+        get
+        {
+            return ValidationHelper.GetString(GetValue("Fields"), "*");
+        }
+        set
+        {
+            this.SetValue("Fields", value);
+            dsGoogleCalendarEvents.Fields = ValidationHelper.GetString(value, "*");
+        }
+    }
+    public DateTime? UpdatedMinutes
+    {
+        get
+        {
+            if (ValidationHelper.GetDateTime(GetValue("UpdatedMinutes"), new DateTime()) == new DateTime())
+            {
+                return null;
+            }
+            else
+            {
+                return ValidationHelper.GetDateTime(GetValue("UpdatedMinutes"), DateTime.Now);
+            }
+        }
+        set
+        {
+            this.SetValue("UpdatedMinutes", value);
+            dsGoogleCalendarEvents.UpdatedMin = UpdatedMinutes;
+        }
+    }
+
+
+
+
+    #endregion
+
+
+    /// <summary>
+    /// Gets or sets the value of the WhereCondition web part property.
+    /// </summary>
+    public string WhereCondition
+    {
+        get
+        {
+            return ValidationHelper.GetString(this.GetValue("WhereCondition"), "");
+        }
+        set
+        {
+            this.SetValue("WhereCondition", value);
+            dsGoogleCalendarEvents.WhereCondition = value;
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the value of the OrderBy web part property.
+    /// </summary>
+    public string OrderBy
+    {
+        get
+        {
+            return ValidationHelper.GetString(this.GetValue("OrderBy"), "");
+        }
+        set
+        {
+            this.SetValue("OrderBy", value);
+            dsGoogleCalendarEvents.OrderBy = value;
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the value of the FilterName web part property.
+    /// </summary>
+    public string FilterName
+    {
+        get
+        {
+            return ValidationHelper.GetString(this.GetValue("FilterName"), "");
+        }
+        set
+        {
+            this.SetValue("FilterName", value);
+            dsGoogleCalendarEvents.SourceFilterName = value;
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the cache item name.
+    /// </summary>
+    public override string CacheItemName
+    {
+        get
+        {
+            return ValidationHelper.GetString(GetValue("CacheItemName"), base.CacheItemName);
+        }
+        set
+        {
+            base.CacheItemName = value;
+            dsGoogleCalendarEvents.CacheItemName = value;
+        }
+    }
+
+    /// <summary>
+    /// Cache dependencies, each cache dependency on a new line.
+    /// </summary>
+    public override string CacheDependencies
+    {
+        get
+        {
+            string Dependencies = ValidationHelper.GetString(ValidationHelper.GetString(GetValue("CacheDependencies"), base.CacheDependencies), dsGoogleCalendarEvents.CacheDependencies);
+            if (Dependencies == "##DEFAULT##\n")
+            {
+                return ValidationHelper.GetString(base.CacheDependencies, dsGoogleCalendarEvents.CacheDependencies);
+            }
+            else
+            {
+                return Dependencies;
+            }
+        }
+        set
+        {
+            base.CacheDependencies = value;
+            dsGoogleCalendarEvents.CacheDependencies = value;
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the cache minutes.
+    /// </summary>
+    public override int CacheMinutes
+    {
+        get
+        {
+            return ValidationHelper.GetInteger(GetValue("CacheMinutes"), base.CacheMinutes);
+        }
+        set
+        {
+            base.CacheMinutes = value;
+            dsGoogleCalendarEvents.CacheMinutes = value;
+        }
+    }
+
+    /// <summary>
+    /// Content loaded event handler.
+    /// </summary>
+    public override void OnContentLoaded()
+    {
+        base.OnContentLoaded();
+        SetupControl();
+    }
+
+    /// <summary>
+    /// Initializes the properties of the internal data source control.
+    /// </summary>
+    protected void SetupControl()
+    {
+        if (this.StopProcessing)
+        {
+            // Does nothing if the web part is disabled
+        }
+        else
+        {
+            // Google Filters
+            this.dsGoogleCalendarEvents.CalendarIDs = CalendarIDs;
+            this.dsGoogleCalendarEvents.TimeMax = TimeMax;
+            this.dsGoogleCalendarEvents.TimeMin = TimeMin;
+            this.dsGoogleCalendarEvents.TimeZone = TimeZone;
+            this.dsGoogleCalendarEvents.Query = Query;
+            this.dsGoogleCalendarEvents.SingleEvents = SingleEvents;
+            this.dsGoogleCalendarEvents.OrderByCode = GoogleOrderBy;
+            this.dsGoogleCalendarEvents.IncludeAttachments = IncludeAttachments;
+            this.dsGoogleCalendarEvents.IncludeAttendees = IncludeAttendees;
+            this.dsGoogleCalendarEvents.MaxResults = MaxResults;
+            this.dsGoogleCalendarEvents.ShowDeleted = ShowDeleted;
+            this.dsGoogleCalendarEvents.ShowHiddenInvitation = ShowHiddenInvitations;
+            this.dsGoogleCalendarEvents.PrettyPrint = PrettyPrint;
+            this.dsGoogleCalendarEvents.UserIp = dsGoogleCalendarEvents.UserIp = (TrackByUserIP ? HttpContext.Current.Request.UserHostAddress : null);
+            this.dsGoogleCalendarEvents.AlwaysIncludeEmail = AlwaysIncludeEmail;
+            this.dsGoogleCalendarEvents.Fields = Fields;
+            this.dsGoogleCalendarEvents.UpdatedMin = UpdatedMinutes;
+
+            // Post Query Filtering of Data Table
+            this.dsGoogleCalendarEvents.WhereCondition = this.WhereCondition;
+            this.dsGoogleCalendarEvents.OrderBy = this.OrderBy;
+
+            
+            // Sets the inner data source's name according to the web part's 'Web part control ID' property.
+            // This allows listing web parts to connect to the inner control.
+            // The identifier property is named 'FilterName' because data sources inherit the property from
+            // a base class shared with filter objects.
+            this.dsGoogleCalendarEvents.FilterName = (string)this.GetValue("WebPartControlID");
+
+            // Connects the attached filter, as specified by the 'Filter name' property of the web part
+            this.dsGoogleCalendarEvents.SourceFilterName = this.FilterName;
+
+            // Caching
+            this.dsGoogleCalendarEvents.CacheItemName = this.CacheItemName;
+            this.dsGoogleCalendarEvents.CacheDependencies = this.CacheDependencies;
+            this.dsGoogleCalendarEvents.CacheMinutes = this.CacheMinutes;
+        }
+    }
+}
+
+
+

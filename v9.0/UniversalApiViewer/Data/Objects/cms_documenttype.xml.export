@@ -1,0 +1,561 @@
+﻿<cms_documenttype version="8.2">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>4630</ClassID>
+      <ClassDisplayName>Test Universal Api Food</ClassDisplayName>
+      <ClassName>test.Food</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="test_Food"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="FoodID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="Name" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Price" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Description" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Calories" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//test_Food" /&gt;
+      &lt;xs:field xpath="FoodID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="FoodID" columntype="integer" isPK="true" columnprecision="0" publicfield="false" guid="2c0ab9b3-00fe-4729-aff8-aa35f06ee918"&gt;&lt;properties&gt;&lt;fieldcaption&gt;FoodID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Name" visible="true" columntype="text" allowempty="true" columnsize="200" publicfield="false" guid="87bbe558-fc7a-4527-b679-42aacb4101de"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Name&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Price" visible="true" columntype="text" allowempty="true" columnsize="200" publicfield="false" guid="91d9dacd-b9c5-4703-a75f-7e6f0524ece4"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Price&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Description" visible="true" columntype="text" allowempty="true" columnsize="200" publicfield="false" guid="22ac0c51-ff23-461e-bd00-ff5549791b03"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Description&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Calories" visible="true" columntype="text" allowempty="true" columnsize="200" publicfield="false" guid="46c584c0-3b9b-4e7b-825b-033bc9c92120" reftype="Required"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Calories&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>test_Food</ClassTableName>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassLastModified>2015-08-25T09:47:20.1098149-05:00</ClassLastModified>
+      <ClassGUID>69efebc3-62d0-45f2-b5e9-2f0634d5931e</ClassGUID>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item searchable="False" name="Price" content="True" id="0104c2dd-5cb7-49a6-a5e4-81e3e216df59" tokenized="True" /&gt;&lt;item searchable="False" name="Name" content="True" id="b5f087d9-9532-409c-a50f-01d88d528802" tokenized="True" /&gt;&lt;item searchable="False" name="Description" content="True" id="4c4b41b7-e050-4ae0-a0f8-abf5c47e7059" tokenized="True" /&gt;&lt;item searchable="False" name="Calories" content="True" id="f9b52e84-a763-463a-915f-88ff316ca9a6" tokenized="True" /&gt;&lt;item searchable="True" name="FoodID" content="False" id="d453719c-2fe9-47a6-9a04-638985e4caec" tokenized="False" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassVersionGUID>393a6406-fe42-43cf-9223-4f6b10a4cc4d</ClassVersionGUID>
+      <ClassIconClass>icon-doc-o</ClassIconClass>
+    </cms_class>
+    <cms_class>
+      <ClassID>4631</ClassID>
+      <ClassDisplayName>Test Universal Api Food Type</ClassDisplayName>
+      <ClassName>test.FoodType</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="test_FoodType"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="FoodTypeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="Name" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//test_FoodType" /&gt;
+      &lt;xs:field xpath="FoodTypeID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form version="2"&gt;&lt;field column="FoodTypeID" columntype="integer" isPK="true" columnprecision="0" publicfield="false" guid="c359f691-ba56-45f2-8535-b61c25eb0e93"&gt;&lt;properties&gt;&lt;fieldcaption&gt;FoodTypeID&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Name" visible="true" columntype="text" allowempty="true" columnsize="200" publicfield="false" guid="c84168d0-4ba5-442e-b2c9-f87cf26d9c78" reftype="Required"&gt;&lt;properties&gt;&lt;fieldcaption&gt;Name&lt;/fieldcaption&gt;&lt;/properties&gt;&lt;settings&gt;&lt;controlname&gt;TextBoxControl&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>test_FoodType</ClassTableName>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassLastModified>2015-08-25T09:45:36.6779306-05:00</ClassLastModified>
+      <ClassGUID>4e1bc895-8d84-4edd-a899-5cb3645d5148</ClassGUID>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>DocumentContent</ClassSearchContentColumn>
+      <ClassSearchCreationDateColumn>DocumentCreatedWhen</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item searchable="False" name="Name" content="True" id="9de0cd65-e2ed-4e14-8566-e1d446805f59" tokenized="True" /&gt;&lt;item searchable="True" name="FoodTypeID" content="False" id="e66bcaa2-0dd0-41b7-bcd3-fa3fdd1e5f8e" tokenized="False" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassVersionGUID>0d151e15-6b31-4a12-8414-81d88a967437</ClassVersionGUID>
+      <ClassIconClass>icon-doc-o</ClassIconClass>
+    </cms_class>
+    <cms_permission>
+      <PermissionID>12002</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>4630</ClassID>
+      <PermissionGUID>2204eeb2-70aa-4dca-b75c-022120d865a2</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:40:13.0034508-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12011</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>4631</ClassID>
+      <PermissionGUID>f49296d7-b47d-4b02-9473-050427ce041e</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:44:18.1578191-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12003</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>4630</ClassID>
+      <PermissionGUID>54b0913d-3349-41dd-983e-05b0727d2db7</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:40:13.0304535-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12016</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>4631</ClassID>
+      <PermissionGUID>0570f30c-3233-46d8-80af-0b46c88398b7</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:44:18.2158249-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12013</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>4631</ClassID>
+      <PermissionGUID>443fdf5c-cedc-4f38-8f89-0fee5f9e699e</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:44:18.1788212-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12008</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modifypermissions$}</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>4630</ClassID>
+      <PermissionGUID>d6385100-e979-4382-a41f-1854e112346d</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:40:13.1104615-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modifypermissions$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12007</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>4630</ClassID>
+      <PermissionGUID>23172ceb-ab8e-4595-bfba-4c834ae07025</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:40:13.0904595-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12004</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>4630</ClassID>
+      <PermissionGUID>94891bb2-713a-4267-8d4d-5e733c247650</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:40:13.045455-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12010</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>4631</ClassID>
+      <PermissionGUID>343984d8-4c76-43b9-af43-7c9482d70f39</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:44:18.1448178-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12005</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>4630</ClassID>
+      <PermissionGUID>9d58cf31-35fc-4b00-85b8-7ea18d67ca28</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:40:13.0584563-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12014</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>4631</ClassID>
+      <PermissionGUID>693e6838-10e5-45ab-9810-83bba6a49bb9</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:44:18.1908224-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12015</PermissionID>
+      <PermissionDisplayName>{$permissionnames.exploretree$}</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>4631</ClassID>
+      <PermissionGUID>065a220f-e24a-4bb2-90ea-9caf3eefe318</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:44:18.2028236-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.exploretree$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12009</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>4631</ClassID>
+      <PermissionGUID>2a7c402f-2947-4894-bc22-b08419fc5673</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:44:18.0958129-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12001</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>4630</ClassID>
+      <PermissionGUID>fa0c68f2-d0d7-446d-8b6c-c271b90f6693</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:40:12.5494054-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12006</PermissionID>
+      <PermissionDisplayName>{$permissionnames.destroy$}</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>4630</ClassID>
+      <PermissionGUID>1743d924-9668-4280-89ef-db5e8bd105f4</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:40:13.0764581-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.destroy$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>12012</PermissionID>
+      <PermissionDisplayName>{$permissionnames.createanywhere$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>4631</ClassID>
+      <PermissionGUID>03c8fbc7-b08e-4957-b2ad-e51a46e69e68</PermissionGUID>
+      <PermissionLastModified>2015-08-25T09:44:18.1678201-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.document.createanywhere$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_transformation>
+      <TransformationID>4850</TransformationID>
+      <TransformationName>RSSItem</TransformationName>
+      <TransformationCode>&lt;item&gt;
+  &lt;guid isPermaLink="false"&gt;&lt;%# Eval("NodeGUID") %&gt;&lt;/guid&gt;
+  &lt;title&gt;&lt;%# EvalCDATA("DocumentName") %&gt;&lt;/title&gt;
+  &lt;description&gt;&lt;%# EvalCDATA("NodeAliasPath") %&gt;&lt;/description&gt;
+  &lt;pubDate&gt;&lt;%# GetRSSDateTime(Eval("DocumentCreatedWhen")) %&gt;&lt;/pubDate&gt;
+  &lt;link&gt;&lt;![CDATA[&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;]]&gt;&lt;/link&gt;
+&lt;/item&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4631</TransformationClassID>
+      <TransformationVersionGUID>bdb25ac0-61ec-43b4-88fd-69f5dda3e519</TransformationVersionGUID>
+      <TransformationGUID>142f8618-1785-4933-80c7-327b5980e55f</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:44:53.4878401-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4842</TransformationID>
+      <TransformationName>Preview</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Name:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Name") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Price:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Price") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Description:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Description") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Calories:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Calories") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4630</TransformationClassID>
+      <TransformationVersionGUID>c90ca92b-bb51-42d0-9adf-d304368e506f</TransformationVersionGUID>
+      <TransformationGUID>72b99eba-e381-4897-9b76-37df2bd1c3a3</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:42:06.0493609-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4846</TransformationID>
+      <TransformationName>DefaultWithSub</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Name:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Name") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Price:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Price") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Description:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Description") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Calories:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Calories") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;%# If(Eval("NodeHasChildren"), "&lt;h3&gt; Sub Types:&lt;/h3&gt;&lt;div class=\"subItem\"&gt;", "") %&gt;
+  &lt;cms:SubLevelPlaceHolder runat="server" ID="plcSub" /&gt;
+&lt;%# If(Eval("NodeHasChildren"), "&lt;/div&gt;&lt;hr/&gt;", "") %&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4630</TransformationClassID>
+      <TransformationVersionGUID>e897007e-4876-4ee9-b7fc-33f613229e3d</TransformationVersionGUID>
+      <TransformationGUID>f7c817b0-8fdf-4102-966b-43c27cf0b57e</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:43:17.126277-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+      <TransformationIsCustom>false</TransformationIsCustom>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4843</TransformationID>
+      <TransformationName>RSSItem</TransformationName>
+      <TransformationCode>&lt;item&gt;
+  &lt;guid isPermaLink="false"&gt;&lt;%# Eval("NodeGUID") %&gt;&lt;/guid&gt;
+  &lt;title&gt;&lt;%# EvalCDATA("DocumentName") %&gt;&lt;/title&gt;
+  &lt;description&gt;&lt;%# EvalCDATA("NodeAliasPath") %&gt;&lt;/description&gt;
+  &lt;pubDate&gt;&lt;%# GetRSSDateTime(Eval("DocumentCreatedWhen")) %&gt;&lt;/pubDate&gt;
+  &lt;link&gt;&lt;![CDATA[&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;]]&gt;&lt;/link&gt;
+&lt;/item&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4630</TransformationClassID>
+      <TransformationVersionGUID>7c69710d-5a41-4b05-bcad-e993ab395897</TransformationVersionGUID>
+      <TransformationGUID>aadba6a8-b3ca-4535-ba18-490af4210e8d</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:42:06.0933653-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4852</TransformationID>
+      <TransformationName>Test</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Food Type Name:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Name") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4631</TransformationClassID>
+      <TransformationVersionGUID>7b82e426-c398-4dad-95f4-8626d345f98e</TransformationVersionGUID>
+      <TransformationGUID>d5c23f55-bb9c-4eab-9df4-59b2477aa126</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:45:36.6729301-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+      <TransformationIsCustom>false</TransformationIsCustom>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4849</TransformationID>
+      <TransformationName>Preview</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Name:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Name") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4631</TransformationClassID>
+      <TransformationVersionGUID>89b589a1-66d0-4e78-9f5e-a7b70ac36329</TransformationVersionGUID>
+      <TransformationGUID>f2e34923-f84d-4be6-b6f8-7e544cd0b4bd</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:44:53.4588372-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4845</TransformationID>
+      <TransformationName>AllRows</TransformationName>
+      <TransformationCode>  &lt;tr&gt;
+    &lt;td&gt;&lt;%# Eval("NodeGUID") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Name") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Price") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Description") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Calories") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Published") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ClassName") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NodeID") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NodeParentID") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NodeLevel") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NodeOrder") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("DocumentID") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("DocumentCulture") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NodeHasChildren") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("SiteName") %&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NodeClassID") %&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="sub"&gt;
+  &lt;cms:SubLevelPlaceHolder runat="server" ID="plcSub" /&gt;
+&lt;/tr&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4630</TransformationClassID>
+      <TransformationVersionGUID>fd6c06a4-d721-450e-a956-ee67d47dfb44</TransformationVersionGUID>
+      <TransformationGUID>832fdcf2-61e2-4cdc-9e07-88e4ab093b51</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:42:43.227695-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationCSS></TransformationCSS>
+      <TransformationIsCustom>false</TransformationIsCustom>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4851</TransformationID>
+      <TransformationName>AtomItem</TransformationName>
+      <TransformationCode>&lt;entry&gt;
+  &lt;title&gt;&lt;%# EvalCDATA("DocumentName") %&gt;&lt;/title&gt;
+  &lt;link href="&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;"/&gt;
+  &lt;id&gt;urn:uuid:&lt;%# Eval("NodeGUID") %&gt;&lt;/id&gt;
+  &lt;published&gt;&lt;%# GetAtomDateTime(Eval("DocumentCreatedWhen")) %&gt;&lt;/published&gt;
+  &lt;updated&gt;&lt;%# GetAtomDateTime(Eval("DocumentModifiedWhen")) %&gt;&lt;/updated&gt;
+  &lt;author&gt;
+    &lt;name&gt;&lt;%# Eval("NodeOwnerFullName") %&gt;&lt;/name&gt;
+  &lt;/author&gt;
+  &lt;summary&gt;&lt;%# EvalCDATA("NodeAliasPath") %&gt;&lt;/summary&gt;
+&lt;/entry&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4631</TransformationClassID>
+      <TransformationVersionGUID>689ebe0e-2329-436d-a104-60296ad8cbf6</TransformationVersionGUID>
+      <TransformationGUID>9f1aea19-4835-4593-82f9-98afe4bb32b3</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:44:53.506842-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4841</TransformationID>
+      <TransformationName>Default</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Name:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Name") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Price:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Price") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Description:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Description") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Calories:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Calories") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4630</TransformationClassID>
+      <TransformationVersionGUID>c90ca92b-bb51-42d0-9adf-d304368e506f</TransformationVersionGUID>
+      <TransformationGUID>90bbd7f5-01fd-41e5-a4ec-bee2906f6715</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:42:05.8143374-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4844</TransformationID>
+      <TransformationName>AtomItem</TransformationName>
+      <TransformationCode>&lt;entry&gt;
+  &lt;title&gt;&lt;%# EvalCDATA("DocumentName") %&gt;&lt;/title&gt;
+  &lt;link href="&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;"/&gt;
+  &lt;id&gt;urn:uuid:&lt;%# Eval("NodeGUID") %&gt;&lt;/id&gt;
+  &lt;published&gt;&lt;%# GetAtomDateTime(Eval("DocumentCreatedWhen")) %&gt;&lt;/published&gt;
+  &lt;updated&gt;&lt;%# GetAtomDateTime(Eval("DocumentModifiedWhen")) %&gt;&lt;/updated&gt;
+  &lt;author&gt;
+    &lt;name&gt;&lt;%# Eval("NodeOwnerFullName") %&gt;&lt;/name&gt;
+  &lt;/author&gt;
+  &lt;summary&gt;&lt;%# EvalCDATA("NodeAliasPath") %&gt;&lt;/summary&gt;
+&lt;/entry&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4630</TransformationClassID>
+      <TransformationVersionGUID>1b7b9514-dc4b-48d8-be8e-56361a4a1861</TransformationVersionGUID>
+      <TransformationGUID>8163df63-1d95-4c72-8927-f1b4154a783e</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:42:06.1213681-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4848</TransformationID>
+      <TransformationName>Default</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Name:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("Name") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4631</TransformationClassID>
+      <TransformationVersionGUID>89b589a1-66d0-4e78-9f5e-a7b70ac36329</TransformationVersionGUID>
+      <TransformationGUID>68f009f6-24bb-4457-819c-fcec3137b933</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:44:53.426834-05:00</TransformationLastModified>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>4847</TransformationID>
+      <TransformationName>Test</TransformationName>
+      <TransformationCode></TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>4630</TransformationClassID>
+      <TransformationVersionGUID>a058c99a-6172-4ca0-830f-25cd98d6662b</TransformationVersionGUID>
+      <TransformationGUID>e63d0974-6bcb-4d63-a5e6-ff2ec334ef4d</TransformationGUID>
+      <TransformationLastModified>2015-08-25T09:47:20.1058145-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>true</TransformationIsHierarchical>
+      <TransformationHierarchicalXML>&lt;Items&gt;&lt;Item ID="63825f44-46da-4d13-9f89-dbc4c6cf69a7" Level="0" Type="item" Value="test.Food" TransformationName="test.Food.DefaultWithSub" ApplyToSublevels="True" /&gt;&lt;Item ID="f2777506-bf3c-4453-bd3e-fa1173ff899f" Level="0" Type="item" Value="test.FoodType" TransformationName="test.FoodType.Test" ApplyToSublevels="True" /&gt;&lt;/Items&gt;</TransformationHierarchicalXML>
+      <TransformationCustomizedColumns></TransformationCustomizedColumns>
+    </cms_transformation>
+  </NewDataSet>
+</cms_documenttype>

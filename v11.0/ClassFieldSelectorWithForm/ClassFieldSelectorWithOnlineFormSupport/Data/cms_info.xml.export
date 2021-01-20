@@ -1,0 +1,32 @@
+﻿<cms_info version="11.0">
+  <NewDataSet>
+    <cms_info>
+      <Key>machinename</Key>
+      <Value>TFAYAS-PC</Value>
+    </cms_info>
+    <cms_info>
+      <Key>domainname</Key>
+      <Value>kentico11.hbstest.net</Value>
+    </cms_info>
+    <cms_info>
+      <Key>currentuser</Key>
+      <Value>administrator</Value>
+    </cms_info>
+    <cms_info>
+      <Key>starttime</Key>
+      <Value>7/17/2018 3:23:56 PM</Value>
+    </cms_info>
+    <cms_info>
+      <Key>systemversion</Key>
+      <Value>11.0.6554.18060</Value>
+    </cms_info>
+    <cms_info>
+      <Key>hotfixversion</Key>
+      <Value>0</Value>
+    </cms_info>
+    <cms_info>
+      <Key>webapplication</Key>
+      <Value>False</Value>
+    </cms_info>
+  </NewDataSet>
+</cms_info>

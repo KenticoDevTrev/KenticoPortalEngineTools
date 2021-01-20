@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="~/CMSModules/HBS_GiftCards/FormControls/GiftCardCodeGenerator/GiftCardCodeGenerator.ascx.cs" Inherits="CMSModules_HBS_GiftCards_FormControls_GiftCardCodeGenerator_GiftCardCodeGenerator" %>
+<asp:TextBox runat="server" ID="tbxValue" Text="Test" CssClass="form-control" /> <asp:Button runat="server" ID="btnGenerateNew" CssClass="btn btn-default" OnClick="btnGenerateNew_Click" Text="Generate New Code" />

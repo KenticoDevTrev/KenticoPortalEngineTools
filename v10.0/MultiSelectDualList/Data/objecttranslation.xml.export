@@ -1,0 +1,9 @@
+﻿<objecttranslation version="10.0">
+  <NewDataSet>
+    <objecttranslation>
+      <ClassName>cms_formusercontrol</ClassName>
+      <ID>609</ID>
+      <CodeName>MultipleChoiceControl_WithOrder</CodeName>
+    </objecttranslation>
+  </NewDataSet>
+</objecttranslation>

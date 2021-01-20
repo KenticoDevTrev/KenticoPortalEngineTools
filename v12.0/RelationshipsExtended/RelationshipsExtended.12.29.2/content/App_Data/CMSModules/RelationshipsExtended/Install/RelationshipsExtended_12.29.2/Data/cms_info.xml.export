@@ -1,0 +1,36 @@
+﻿<cms_info version="12.0">
+  <NewDataSet>
+    <cms_info>
+      <Key>machinename</Key>
+      <Value>HBS-TFAYAS05</Value>
+    </cms_info>
+    <cms_info>
+      <Key>domainname</Key>
+      <Value>portal.kentico12.hbstest.net</Value>
+    </cms_info>
+    <cms_info>
+      <Key>currentuser</Key>
+      <Value>administrator</Value>
+    </cms_info>
+    <cms_info>
+      <Key>starttime</Key>
+      <Value>8/28/2019 9:56:18 AM</Value>
+    </cms_info>
+    <cms_info>
+      <Key>systemversion</Key>
+      <Value>12.0.7115.13953</Value>
+    </cms_info>
+    <cms_info>
+      <Key>hotfixversion</Key>
+      <Value>29</Value>
+    </cms_info>
+    <cms_info>
+      <Key>webapplication</Key>
+      <Value>False</Value>
+    </cms_info>
+    <cms_info>
+      <Key>modulename</Key>
+      <Value>RelationshipsExtended</Value>
+    </cms_info>
+  </NewDataSet>
+</cms_info>

@@ -1,0 +1,14 @@
+In order for this to work, a couple things take place.
+
+1: The default Product Option type selector page needs to be modified so you can set a Product Option type of "Form Control"
+	a: Go to -> Modules -> E-Commerce -> OPtion Category -> Fields
+	b: set "CategorySelectionType"'s Form Control to "Option category selection type selector with Form Control" (in the import)
+	c: set "CategoryDefaultOptions"'s Form Control to "Option category product option selector With Form Control" (in the import)
+2: Now that you can select the Product Option Type as "Form Control" and enter the form control location, next you will need to create your product option form control
+	a: Create your control (You can use the /CMSModules/AvastoneEcommerceExtension/Controls/ProductOptions/SampleFormControlProductOption.ascx), inheriting from Avastone.Ecommerce.AvastoneProductOptionSelector class (gives a couple extra hooks like Add to cart Before/After,  Add to wish before)
+	b: MUST return a 'string' value for the GetSelectedSKUOptionsCustom, the other methods and hooks can be used to properly generate and/or set it. The string value can be a SkuID for "Attribute" or "Product" types, or just the text for "Text" types of product options.
+3: Lastly, you need to use the modified ShoppingCartItemSelector (included in the import) in your ecommerce transformation in order for the rest to work.
+	a: In your Transformation, replace the control reference "/CMSModules/Ecommerce/Controls/ProductOptions/ShoppingCartItemSelector.ascx" with "/CMSModules/AvastoneEcommerceExtension/Controls/ProductOptions/ShoppingCartItemSelector.ascx"
+
+
+	
